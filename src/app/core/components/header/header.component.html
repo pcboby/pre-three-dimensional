@@ -1,0 +1,12 @@
+<div class="logo">logo</div>
+<div class="navs">
+    <ul>
+        <li *ngFor="let item of items" (click)="select(item.id)" [ngClass]="{'active':selectNav === item.id}">
+            <a>
+                <i class="{{item.icon}}"></i>
+                <span>{{item.title}}</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="quick">quick</div>

@@ -1,0 +1,35 @@
+.navs {}
+
+.navs ul {}
+
+.navs ul li {
+    float: left;
+    padding: 4px 16px;
+    &.active {
+        background-color: #0097db !important;
+    }
+    &:hover {
+        background-color: rgba($color: #fff, $alpha: .1);
+        cursor: pointer;
+    }
+}
+
+.navs ul li a {
+    display: block;
+    text-align: center;
+}
+
+.navs ul li a i {
+    display: block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 20px;
+    margin: 2px auto;
+}
+
+.navs ul li a span {
+    display: block;
+    line-height: 20px;
+    font-size: 14px;
+}

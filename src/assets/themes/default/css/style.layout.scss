@@ -1,0 +1,42 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.layout {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout .layout-header {}
+
+.layout .layout-silder {
+    display: none;
+}
+
+.layout .layout-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.layout .layout-wraper {
+    flex: 1;
+}
+
+.layout .layout-toolbar {
+    width: 48px;
+    height: 100%;
+}
+
+.layout .layout-sidebar {
+    width: 280px;
+}
+
+.layout .layout-footer {}
