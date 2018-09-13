@@ -14,13 +14,6 @@ import {
   CommonModule
 } from '@angular/common';
 import {
-  TooltipModule,
-  ModalModule
-} from 'ngx-bootstrap';
-import {
-  TreeviewModule
-} from 'ngx-treeview';
-import {
   HeaderComponent,
   SilderComponent,
   WraperComponent,
@@ -35,12 +28,6 @@ import {
 
 const modules = [
   RouterModule, CommonModule
-];
-
-const bootstrapModules = [
-  TooltipModule.forRoot(),
-  ModalModule.forRoot(),
-  TreeviewModule.forRoot()
 ];
 
 const directives = [];
@@ -63,8 +50,7 @@ const services = [
 
 @NgModule({
   imports: [
-    ...modules,
-    ...bootstrapModules
+    ...modules
   ],
   declarations: [
     ...directives,

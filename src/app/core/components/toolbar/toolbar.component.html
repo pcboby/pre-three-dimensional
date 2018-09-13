@@ -1,6 +1,6 @@
 <div class="tools">
     <ul>
-        <li *ngFor="let item of items" [tooltip]="item.title" placement="right" (click)="toggle(item.id)" [ngClass]="{'active':selectTool === item.id}">
+        <li *ngFor="let item of items" (click)="toggle(item.id)" [ngClass]="{'active':selectTool === item.id}">
             <a>
                 <i class="{{item.icon}}"></i>
             </a>
