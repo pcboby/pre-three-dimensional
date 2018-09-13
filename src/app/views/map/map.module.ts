@@ -1,8 +1,25 @@
-import { MapRouting } from './map.routing';
-import { CoreModule } from './../../core/core.module';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MapComponent } from './map.component';
+import {
+  ControlsComponent
+} from './components';
+import {
+  MapRouting
+} from './map.routing';
+import {
+  CoreModule
+} from './../../core/core.module';
+import {
+  NgModule
+} from '@angular/core';
+import {
+  CommonModule
+} from '@angular/common';
+import {
+  MapComponent
+} from './map.component';
+
+const controlComponents = [
+  ControlsComponent
+];
 
 @NgModule({
   imports: [
@@ -10,6 +27,6 @@ import { MapComponent } from './map.component';
     MapRouting,
     CoreModule
   ],
-  declarations: [MapComponent]
+  declarations: [MapComponent, ControlsComponent]
 })
-export class MapModule { }
+export class MapModule {}

@@ -6,7 +6,7 @@
     float: left;
     padding: 4px 16px;
     &.active {
-        background-color: #0097db !important;
+        background-color: #0295d3 !important;
     }
     &:hover {
         background-color: rgba($color: #fff, $alpha: .1);
@@ -17,15 +17,16 @@
 .navs ul li a {
     display: block;
     text-align: center;
+    padding: 4px;
 }
 
 .navs ul li a i {
     display: block;
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
     font-size: 20px;
-    margin: 2px auto;
+    margin: 0 auto;
 }
 
 .navs ul li a span {
