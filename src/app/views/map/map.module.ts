@@ -1,3 +1,4 @@
+import { ArkmapComponent } from './components/arkmap/arkmap.component';
 import { CommonModule } from '@angular/common';
 
 import {
@@ -38,6 +39,7 @@ import {
 
 const controlComponents = [
   ControlsComponent,
+  ArkmapComponent,
   C001001Component,
   C001002Component,
   C001003Component,
