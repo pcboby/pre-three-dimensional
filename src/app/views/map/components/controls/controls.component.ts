@@ -15,9 +15,10 @@ export class ControlsComponent implements OnInit {
 
   constructor(private navigationService: NavigationService) {}
 
+
   ngOnInit() {}
 
-  get show() {
+  get controlId() {
     return (this.navigationService.select_nav || '') + (this.navigationService.select_tool || '');
   }
 }

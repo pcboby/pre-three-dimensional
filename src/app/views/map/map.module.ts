@@ -1,5 +1,27 @@
+import { CommonModule } from '@angular/common';
+
 import {
-  ControlsComponent
+  ElModule
+} from 'element-angular';
+import {
+  ControlsComponent,
+  C001001Component,
+  C001002Component,
+  C001003Component,
+  C002001Component,
+  C002002Component,
+  C003001Component,
+  C003002Component,
+  C004001Component,
+  C004002Component,
+  C004003Component,
+  C004004Component,
+  C004005Component,
+  C004006Component,
+  C004007Component,
+  C004008Component,
+  C005001Component,
+  C005002Component
 } from './components';
 import {
   MapRouting
@@ -11,22 +33,37 @@ import {
   NgModule
 } from '@angular/core';
 import {
-  CommonModule
-} from '@angular/common';
-import {
   MapComponent
 } from './map.component';
 
 const controlComponents = [
-  ControlsComponent
+  ControlsComponent,
+  C001001Component,
+  C001002Component,
+  C001003Component,
+  C002001Component,
+  C002002Component,
+  C003001Component,
+  C003002Component,
+  C004001Component,
+  C004002Component,
+  C004003Component,
+  C004004Component,
+  C004005Component,
+  C004006Component,
+  C004007Component,
+  C004008Component,
+  C005001Component,
+  C005002Component
 ];
 
 @NgModule({
   imports: [
-    CommonModule,
     MapRouting,
-    CoreModule
+    CoreModule,
+    CommonModule,
+    ElModule.forRoot()
   ],
-  declarations: [MapComponent, ControlsComponent]
+  declarations: [MapComponent, ...controlComponents]
 })
 export class MapModule {}

@@ -24,7 +24,8 @@
                         ],
                         "styles": [
                             "src/assets/themes/default/css/style.scss",
-                            "node_modules/font-awesome/css/font-awesome.min.css"
+                            "node_modules/font-awesome/css/font-awesome.min.css",
+                            "node_modules/element-angular/theme/index.css"
                         ],
                         "scripts": []
                     },

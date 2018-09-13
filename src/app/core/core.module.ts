@@ -1,7 +1,7 @@
+import { ElModule } from 'element-angular';
 import {
   NavigationService
 } from './services';
-
 import {
   NgModule,
   Optional,
@@ -27,7 +27,9 @@ import {
 
 
 const modules = [
-  RouterModule, CommonModule
+  RouterModule,
+  CommonModule,
+  ElModule.forRoot()
 ];
 
 const directives = [];
