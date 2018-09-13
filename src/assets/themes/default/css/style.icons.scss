@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'pcFont';
+    src: url('../fonts/Untitled1.ttf'), url('../fonts/Untitled1.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.pIcon {
+    font-family: pcFont;
+    font-weight: normal !important;
+    font-style: normal !important;
+    &.pIcon-001::before {
+        content: '1'
+    }
+    &.pIcon-001001::before {
+        content: 'A'
+    }
+    &.pIcon-001002::before {
+        content: 'B'
+    }
+    &.pIcon-001003::before {
+        content: 'C'
+    }
+    /**/
+    &.pIcon-002::before {
+        content: '2'
+    }
+    &.pIcon-002001::before {
+        content: 'E'
+    }
+    &.pIcon-002002::before {
+        content: 'F'
+    }
+    /**/
+    &.pIcon-003::before {
+        content: '3'
+    }
+    &.pIcon-003001::before {
+        content: 'H'
+    }
+    &.pIcon-003002::before {
+        content: 'I'
+    }
+    /**/
+    &.pIcon-004::before {
+        content: '4'
+    }
+    &.pIcon-004001::before {
+        content: 'K'
+    }
+    &.pIcon-004002::before {
+        content: 'L'
+    }
+    &.pIcon-004003::before {
+        content: 'M'
+    }
+    &.pIcon-004004::before {
+        content: 'N'
+    }
+    &.pIcon-004005::before {
+        content: 'O'
+    }
+    &.pIcon-004006::before {
+        content: 'P'
+    }
+    &.pIcon-004007::before {
+        content: 'Q'
+    }
+    &.pIcon-004008::before {
+        content: 'R'
+    }
+    /**/
+    &.pIcon-005::before {
+        content: '5'
+    }
+    &.pIcon-005001::before {
+        content: 'T'
+    }
+    &.pIcon-005002::before {
+        content: 'U'
+    }
+}
