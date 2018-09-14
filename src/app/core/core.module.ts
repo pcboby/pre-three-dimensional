@@ -1,3 +1,5 @@
+import { CesiummapDirective } from './directies/cesiummap.directive';
+import { ArkmapDirective } from './directies/arkmap.directive';
 import { ElModule } from 'element-angular';
 import {
   NavigationService
@@ -32,7 +34,10 @@ const modules = [
   ElModule.forRoot()
 ];
 
-const directives = [];
+const directives = [
+  ArkmapDirective,
+  CesiummapDirective
+];
 
 const components = [
   HeaderComponent,
