@@ -2,9 +2,6 @@ import { ArkmapComponent } from './components/arkmap/arkmap.component';
 import { CommonModule } from '@angular/common';
 
 import {
-  ElModule
-} from 'element-angular';
-import {
   ControlsComponent,
   C001001Component,
   C001002Component,
@@ -41,6 +38,7 @@ import {
   FormsModule,
   ReactiveFormsModule
 } from '@angular/forms';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 const controlComponents = [
   ControlsComponent,
   ArkmapComponent,
@@ -70,7 +68,8 @@ const controlComponents = [
     MapRouting,
     CoreModule,
     CommonModule,
-    ElModule.forRoot()
+    FormsModule,
+    NgZorroAntdModule
   ],
   declarations: [MapComponent, ...controlComponents]
 })

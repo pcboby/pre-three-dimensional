@@ -1,25 +1,19 @@
 <div class="tools">
     <ul>
-        <li *ngFor="let item of items" (click)="toggle(item.id)" [ngClass]="{'active':selectTool === item.id}">
-            <el-tooltip placement="right-center">
-                <a>
-                    <i class="{{item.icon}}"></i>
-                </a>
-                <ng-template #tip><span>{{item.title}}</span></ng-template>
-            </el-tooltip>
+        <li *ngFor="let item of items" (click)="toggle(item.id)" [ngClass]="{'active':selectTool === item.id}" [nzTitle]="item.title" nzPlacement="right" nz-tooltip>
+            <a>
+                <i class="{{item.icon}}"></i>
+            </a>
         </li>
     </ul>
 </div>
 <div class="space"></div>
 <div class="tools">
     <ul>
-        <li (click)="clear()">
-            <el-tooltip placement="right-center">
-                <a>
-                    <i class="fa fa-trash"></i>
-                </a>
-                <ng-template #tip><span>清理</span></ng-template>
-            </el-tooltip>
+        <li (click)="clear()" nzTitle="清除" nzPlacement="right" nz-tooltip>
+            <a>
+                <i class="fa fa-trash"></i>
+            </a>
         </li>
     </ul>
 </div>

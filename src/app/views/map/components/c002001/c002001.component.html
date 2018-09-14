@@ -1,6 +1,14 @@
-<el-table [model]="tableData" [stripe]="true">
-    <el-table-column model-key="name" label="姓名">
-    </el-table-column>
-    <el-table-column model-key="date" label="日期">
-    </el-table-column>
-</el-table>
+<nz-table #nzTable [nzData]="dataSet">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of nzTable.data">
+            <td>{{data.name}}</td>
+            <td>{{data.age}}</td>
+        </tr>
+    </tbody>
+</nz-table>

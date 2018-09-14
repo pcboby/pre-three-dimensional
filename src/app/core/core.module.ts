@@ -1,6 +1,5 @@
 import { CesiummapDirective } from './directies/cesiummap.directive';
 import { ArkmapDirective } from './directies/arkmap.directive';
-import { ElModule } from 'element-angular';
 import {
   NavigationService
 } from './services';
@@ -26,12 +25,13 @@ import {
   SidebarComponent,
   LayoutComponent
 } from './components';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 
 const modules = [
   RouterModule,
   CommonModule,
-  ElModule.forRoot()
+  NgZorroAntdModule
 ];
 
 const directives = [

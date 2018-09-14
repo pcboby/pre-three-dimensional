@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+
 import {
   CoreModule
 } from './core/core.module';
@@ -16,6 +17,8 @@ import {
 import {
   AppRouting
 } from './app.routing';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,8 +28,10 @@ import {
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,
+    FormsModule,
     AppRouting,
-    CoreModule
+    CoreModule,
+    NgZorroAntdModule
   ],
   providers: [],
   bootstrap: [AppComponent]
