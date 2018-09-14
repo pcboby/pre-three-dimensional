@@ -1,5 +1,6 @@
 import { ArkmapComponent } from './components/arkmap/arkmap.component';
 import { CommonModule } from '@angular/common';
+import { ChartsModule as Ng2Charts } from 'ng2-charts';
 
 import {
   ControlsComponent,
@@ -69,7 +70,8 @@ const controlComponents = [
     CoreModule,
     CommonModule,
     FormsModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    Ng2Charts
   ],
   declarations: [MapComponent, ...controlComponents]
 })
