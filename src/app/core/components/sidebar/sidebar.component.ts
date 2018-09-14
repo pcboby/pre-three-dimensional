@@ -17,8 +17,8 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {}
 
-  get show() {
-    return (this.navigationService.select_nav || '') + (this.navigationService.select_tool || '');
+  close() {
+    this.navigationService.select_tool = null;
   }
 
 }

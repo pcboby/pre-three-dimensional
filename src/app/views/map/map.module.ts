@@ -37,6 +37,10 @@ import {
   MapComponent
 } from './map.component';
 
+import {
+  FormsModule,
+  ReactiveFormsModule
+} from '@angular/forms';
 const controlComponents = [
   ControlsComponent,
   ArkmapComponent,
@@ -61,6 +65,8 @@ const controlComponents = [
 
 @NgModule({
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     MapRouting,
     CoreModule,
     CommonModule,
