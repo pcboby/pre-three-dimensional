@@ -1,0 +1,19 @@
+<ng-container [ngSwitch]="mapMode">
+    <ng-container *ngSwitchCase="'flash'">
+        <app-map-flash></app-map-flash>
+    </ng-container>
+    <ng-container *ngSwitchCase="'ark'">
+        <app-map-ark></app-map-ark>
+    </ng-container>
+    <ng-container *ngSwitchCase="'cesium'">
+        <app-map-cesium></app-map-cesium>
+    </ng-container>
+    <!-- error -->
+    <ng-container *ngSwitchCase="'undefined'">
+        Error
+    </ng-container>
+    <!-- noFined -->
+    <ng-container *ngSwitchDefault>
+        {{mapMode}}
+    </ng-container>
+</ng-container>

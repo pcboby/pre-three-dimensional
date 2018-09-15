@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ArkmapComponent } from './arkmap.component';
+import { MapFlashComponent } from './map-flash.component';
 
-describe('ArkmapComponent', () => {
-  let component: ArkmapComponent;
-  let fixture: ComponentFixture<ArkmapComponent>;
+describe('MapFlashComponent', () => {
+  let component: MapFlashComponent;
+  let fixture: ComponentFixture<MapFlashComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ArkmapComponent ]
+      declarations: [ MapFlashComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ArkmapComponent);
+    fixture = TestBed.createComponent(MapFlashComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

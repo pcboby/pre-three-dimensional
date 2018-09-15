@@ -1,4 +1,4 @@
-import { ArkmapComponent } from './components/arkmap/arkmap.component';
+
 import { CommonModule } from '@angular/common';
 import { ChartsModule as Ng2Charts } from 'ng2-charts';
 
@@ -42,7 +42,6 @@ import {
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 const controlComponents = [
   ControlsComponent,
-  ArkmapComponent,
   C001001Component,
   C001002Component,
   C001003Component,

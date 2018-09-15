@@ -1,5 +1,4 @@
 export * from './controls/controls.component';
-export * from './arkmap/arkmap.component';
 
 export * from './c001001/c001001.component';
 export * from './c001002/c001002.component';
