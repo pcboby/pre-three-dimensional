@@ -20,15 +20,23 @@
                         "tsConfig": "src/tsconfig.app.json",
                         "assets": [
                             "src/favicon.ico",
-                            "src/assets"
+                            "src/assets",
+                            {
+                                "glob": "**/*",
+                                "input": "node_modules/cesium/Build/Cesium",
+                                "output": "/assets/cesium"
+                            }
+
                         ],
                         "styles": [
                             "src/assets/themes/default/css/style.scss",
                             "node_modules/font-awesome/css/font-awesome.min.css",
-                            "node_modules/ng-zorro-antd/src/ng-zorro-antd.min.css"
+                            "node_modules/ng-zorro-antd/src/ng-zorro-antd.min.css",
+                            "node_modules/cesium/Build/Cesium/Widgets/widgets.css"
                         ],
                         "scripts": [
-                            "node_modules/chart.js/dist/Chart.js"
+                            "node_modules/chart.js/dist/Chart.js",
+                            "node_modules/cesium/Build/Cesium/Cesium.js"
                         ]
                     },
                     "configurations": {
@@ -74,12 +82,22 @@
                         "tsConfig": "src/tsconfig.spec.json",
                         "karmaConfig": "src/karma.conf.js",
                         "styles": [
-                            "src/styles.css"
+                            "src/assets/themes/default/css/style.scss",
+                            "node_modules/font-awesome/css/font-awesome.min.css",
+                            "node_modules/ng-zorro-antd/src/ng-zorro-antd.min.css",
+                            "node_modules/cesium/Build/Cesium/Widgets/widgets.css"
                         ],
-                        "scripts": [],
+                        "scripts": [
+                            "node_modules/cesium/Build/Cesium/Cesium.js"
+                        ],
                         "assets": [
                             "src/favicon.ico",
-                            "src/assets"
+                            "src/assets",
+                            {
+                                "glob": "**/*",
+                                "input": "node_modules/cesium/Build/Cesium",
+                                "output": "/assets/cesium"
+                            }
                         ]
                     }
                 },

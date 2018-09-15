@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-map-cesium',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapCesiumComponent implements OnInit {
 
-  constructor() { }
+  constructor(private el: ElementRef) { }
 
   ngOnInit() {
+    const viewer = new Cesium.Viewer(this.el.nativeElement.querySelector('.cesium'));
   }
 
 }
