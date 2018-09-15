@@ -8,3 +8,6 @@ export * from './layout/layout.component';
 export * from './login/login.component';
 export * from './error/error.component';
 export * from './mapper/mapper.component';
+export * from './map-ark/map-ark.component';
+export * from './map-flash/map-flash.component';
+export * from './map-cesium/map-cesium.component';

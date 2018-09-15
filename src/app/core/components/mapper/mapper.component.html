@@ -1,15 +1,15 @@
 <ng-container [ngSwitch]="mapMode">
     <ng-container *ngSwitchCase="'flash'">
         <!-- <app-map-flash></app-map-flash> -->
-        <div appMapFlash style="width:100%;height:100%;"></div>
+        <app-map-flash></app-map-flash>
     </ng-container>
     <ng-container *ngSwitchCase="'ark'">
         <!-- <app-map-ark></app-map-ark> -->
-        <div appMapArk style="width:100%;height:100%;"></div>
+        <app-map-ark></app-map-ark>
     </ng-container>
     <ng-container *ngSwitchCase="'cesium'">
         <!-- <app-map-cesium></app-map-cesium> -->
-        <div appMapCesium style="width:100%;height:100%;"></div>
+        <app-map-cesium></app-map-cesium>
     </ng-container>
     <!-- error -->
     <ng-container *ngSwitchCase="'undefined'">

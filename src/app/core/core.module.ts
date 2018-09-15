@@ -1,10 +1,4 @@
 import {
-  MapCesiumDirective,
-  MapArkDirective,
-  MapFlashDirective
-} from './directies';
-
-import {
   NavigationService,
   MapperService
 } from './services';
@@ -29,7 +23,10 @@ import {
   ToolbarComponent,
   SidebarComponent,
   LayoutComponent,
-  MapperComponent
+  MapperComponent,
+  MapArkComponent,
+  MapFlashComponent,
+  MapCesiumComponent
 } from './components';
 import {
   NgZorroAntdModule
@@ -42,11 +39,7 @@ const modules = [
   NgZorroAntdModule
 ];
 
-const directives = [
-  MapFlashDirective,
-  MapArkDirective,
-  MapCesiumDirective
-];
+const directives = [];
 
 const components = [
   HeaderComponent,
@@ -58,6 +51,9 @@ const components = [
   LayoutComponent,
   LoginComponent,
   MapperComponent,
+  MapArkComponent,
+  MapFlashComponent,
+  MapCesiumComponent,
   ErrorComponent
 ];
 
