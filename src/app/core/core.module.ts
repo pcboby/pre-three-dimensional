@@ -1,7 +1,12 @@
-import { CesiummapDirective } from './directies/cesiummap.directive';
-import { ArkmapDirective } from './directies/arkmap.directive';
 import {
-  NavigationService, MapperService
+  MapCesiumDirective,
+  MapArkDirective,
+  MapFlashDirective
+} from './directies';
+
+import {
+  NavigationService,
+  MapperService
 } from './services';
 import {
   NgModule,
@@ -24,12 +29,11 @@ import {
   ToolbarComponent,
   SidebarComponent,
   LayoutComponent,
-  MapArkComponent,
-  MapCesiumComponent,
-  MapFlashComponent,
   MapperComponent
 } from './components';
-import { NgZorroAntdModule } from 'ng-zorro-antd';
+import {
+  NgZorroAntdModule
+} from 'ng-zorro-antd';
 
 
 const modules = [
@@ -39,8 +43,9 @@ const modules = [
 ];
 
 const directives = [
-  ArkmapDirective,
-  CesiummapDirective
+  MapFlashDirective,
+  MapArkDirective,
+  MapCesiumDirective
 ];
 
 const components = [
@@ -53,9 +58,6 @@ const components = [
   LayoutComponent,
   LoginComponent,
   MapperComponent,
-  MapArkComponent,
-  MapCesiumComponent,
-  MapFlashComponent,
   ErrorComponent
 ];
 
