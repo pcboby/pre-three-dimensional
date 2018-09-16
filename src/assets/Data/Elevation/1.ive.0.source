@@ -1,0 +1,174 @@
+#Ascii Scene 
+#Version 100 
+#Generator OpenSceneGraph 3.2.1 
+
+osgTerrain::TerrainTile {
+  UniqueID 1 
+  TerrainTechnique TRUE {
+    vpb::DatabaseBuilder {
+      UniqueID 2 
+      BuildOptions TRUE {
+        vpb::BuildOptions {
+          UniqueID 3 
+          Directory "Y:\\Project\\重庆防汛管理信息化\\Data\\Elevation\\" 
+          DestinationTileBaseName "1" 
+          DestinationTileExtension ".ive" 
+          ConvertFromGeographicToGeocentric TRUE 
+          SimplifyTerrain FALSE 
+          MaximumNumOfLevels 21 
+          DistributedBuildSplitLevel 6 
+          DistributedBuildSecondarySplitLevel 13 
+          DestinationExtents {
+            -180 -90 180 90 TRUE 
+          }
+        }
+      }
+    }
+  }
+  ElevationLayer TRUE {
+    osgTerrain::CompositeLayer {
+      UniqueID 4 
+      Layers 8 {
+        Object arkBLD::BldProxyLayer {
+          UniqueID 5 
+          FileName "Z:\\3D\\Data\\长江防洪数字沙盘\\流域\\dem\\巴东dem110-wgs.img" 
+          MinLevel 14 
+          MaxLevel 21 
+          FilterColor {
+            0 
+          }
+        }
+        Object arkBLD::BldProxyLayer {
+          UniqueID 6 
+          FileName "Z:\\3D\\Data\\长江防洪数字沙盘\\流域\\dem\\涪陵dem111-wgs.img" 
+          MinLevel 14 
+          MaxLevel 21 
+          FilterColor {
+            0 
+          }
+        }
+        Object arkBLD::BldProxyLayer {
+          UniqueID 7 
+          FileName "Z:\\3D\\Data\\长江防洪数字沙盘\\流域\\dem\\葛洲坝dem111-wgs.img" 
+          MinLevel 14 
+          MaxLevel 21 
+          FilterColor {
+            0 
+          }
+        }
+        Object arkBLD::BldProxyLayer {
+          UniqueID 8 
+          FileName "Z:\\3D\\Data\\长江防洪数字沙盘\\流域\\dem\\开县dem109-wgs.img" 
+          MinLevel 14 
+          MaxLevel 21 
+          FilterColor {
+            0 
+          }
+        }
+        Object arkBLD::BldProxyLayer {
+          UniqueID 9 
+          FileName "Z:\\3D\\Data\\长江防洪数字沙盘\\流域\\dem\\乌东德dem102-wgs.img" 
+          MinLevel 14 
+          MaxLevel 21 
+          FilterColor {
+            0 
+          }
+        }
+        Object arkBLD::BldProxyLayer {
+          UniqueID 10 
+          FileName "Z:\\3D\\Data\\长江防洪数字沙盘\\流域\\dem\\重庆dem107-wgs.img" 
+          MinLevel 14 
+          MaxLevel 21 
+          FilterColor {
+            0 
+          }
+        }
+        Object arkBLD::BldProxyLayer {
+          UniqueID 11 
+          FileName "Z:\\3D\\Data\\长江防洪数字沙盘\\全国数据\\Dem\\country0311.img" 
+          MaxLevel 21 
+          FilterColor {
+            0 
+          }
+        }
+        Object arkBLD::BldProxyLayer {
+          UniqueID 12 
+          FileName "Z:\\3D\\Data\\长江防洪数字沙盘\\三峡\\dem\\sx.img" 
+          MaxLevel 21 
+          FilterColor {
+            0 
+          }
+        }
+      }
+    }
+  }
+  ColorLayers 1 {
+    Layer 0 osgTerrain::CompositeLayer {
+      UniqueID 13 
+      Layers 7 {
+        Object arkBLD::BldProxyLayer {
+          UniqueID 14 
+          FileName "Y:\\Data\\重庆防汛管理信息化\\重庆影像\\chongqing_30m_wgs84.tif" 
+          MinLevel 9 
+          MaxLevel 21 
+          FilterColor {
+            0 
+          }
+        }
+        Object arkBLD::BldProxyLayer {
+          UniqueID 15 
+          FileName "Y:\\Data\\重庆防汛管理信息化\\重庆影像\\重庆市(0).tif" 
+          MinLevel 12 
+          MaxLevel 21 
+          FilterColor {
+            0 
+          }
+        }
+        Object arkBLD::BldProxyLayer {
+          UniqueID 16 
+          FileName "Z:\\3D\\Data\\长江防洪数字沙盘\\流域\\dom\\巴东dom110-wgs.img" 
+          MinLevel 17 
+          MaxLevel 21 
+          FilterColor {
+            0 
+          }
+        }
+        Object arkBLD::BldProxyLayer {
+          UniqueID 17 
+          FileName "Z:\\3D\\Data\\长江防洪数字沙盘\\流域\\dom\\涪陵dom107-wgs.img" 
+          MinLevel 17 
+          MaxLevel 21 
+          FilterColor {
+            0 
+          }
+        }
+        Object arkBLD::BldProxyLayer {
+          UniqueID 18 
+          FileName "Z:\\3D\\Data\\长江防洪数字沙盘\\流域\\dom\\三峡dom.img" 
+          MinLevel 17 
+          MaxLevel 21 
+          FilterColor {
+            0 
+          }
+        }
+        Object arkBLD::BldProxyLayer {
+          UniqueID 19 
+          FileName "Z:\\3D\\Data\\长江防洪数字沙盘\\全国数据\\Dom\\qgdom1.img" 
+          MinLevel 5 
+          MaxLevel 21 
+          FilterColor {
+            0 
+          }
+        }
+        Object arkBLD::BldProxyLayer {
+          UniqueID 20 
+          FileName "Z:\\3D\\Data\\兰州大学\\DOM84\\wsiearth.tif" 
+          MaxLevel 21 
+          FilterColor {
+            0 
+          }
+        }
+      }
+    }
+  }
+}

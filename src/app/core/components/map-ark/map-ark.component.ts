@@ -1,4 +1,8 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ElementRef
+} from '@angular/core';
 
 @Component({
   selector: 'app-map-ark',
@@ -11,7 +15,7 @@ export class MapArkComponent implements OnInit {
   }
 
   ngOnInit() {
-    // document.querySelector('#ArkObj');
+
   }
 
 }
