@@ -1,0 +1,33 @@
+html {
+    width: 99%;
+    height: 96%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+#treeContainer {
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+.tree {
+    width: 100%;
+    height: 50%;
+    overflow-y:auto;
+}
+
+#scene {
+    float: right;
+    width: 80%;
+    height: 90%
+}
+
+#buttonContainer {
+    float: right;
+    overflow-y:auto;
+}
