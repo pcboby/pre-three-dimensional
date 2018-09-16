@@ -6,7 +6,7 @@ import {
   providedIn: 'root'
 })
 export class MapperService {
-  public mapMode = 'ark'; // flash || ark || cesium
+  public mapMode = 'cesium'; // flash || ark || cesium
   private mapModes = [{
     name: 'Flash',
     code: 'flash',

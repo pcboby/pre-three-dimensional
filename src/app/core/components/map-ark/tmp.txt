@@ -1,0 +1,13 @@
+Initialize(el, url) {
+    const iframe = document.createElement('iframe');
+    iframe.src = 'about:blank';
+    iframe.width = '100%';
+    iframe.height = '100%';
+    el.appendChild(iframe);
+    const doc = iframe.contentWindow;
+    // tslint:disable-next-line:max-line-length
+    doc.document.write('<object id="ArkObj" type="application/x-itst-activex" width="100%" height="100%" classid="CLSID:0BCAF84B-7570-4A96-9528-542A77E6606A"><param name="_Version" value="65536"><param name="_ExtentX" value="13229"><param name="_ExtentY" value="13229"><param name="_StockProps" value="0"></object>');
+    doc.document.close();
+    doc.document.querySelector('#ArkObj')['Initialize']('http://192.168.31.47:8081/assets/Data/Terrains/ChongQing.arkpro');
+
+  }

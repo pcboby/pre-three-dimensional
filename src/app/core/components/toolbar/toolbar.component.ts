@@ -48,4 +48,8 @@ export class ToolbarComponent implements OnInit {
   clear() {
     console.log('do map clear~~');
   }
+  // setMapMode(val) {
+  //   console.log('setMapMode', val);
+  //   this.mapperService.mapMode = val;
+  // }
 }
