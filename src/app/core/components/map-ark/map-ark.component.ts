@@ -4,6 +4,8 @@ import {
   ElementRef
 } from '@angular/core';
 
+import * as $ from 'jquery';
+
 @Component({
   selector: 'app-map-ark',
   templateUrl: './map-ark.component.html',
@@ -24,6 +26,7 @@ export class MapArkComponent implements OnInit {
     //   // tslint:disable-next-line:max-line-length
     //   this.Initialize();
     // }, 1000);
+    console.log($('iframe'));
   }
 
   Initialize() {
