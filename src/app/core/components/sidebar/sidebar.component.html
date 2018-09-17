@@ -1,6 +1,11 @@
-<nz-card class="ant-card-flex" style="width:100%; height:100%;" [nzTitle]="title" [nzExtra]="extraTemplate" [nzBordered]="false">
-    <ng-content></ng-content>
-</nz-card>
-<ng-template #extraTemplate>
-    <a class="closeBtn" (click)="close()">关闭</a>
-</ng-template>
+<div class="panel" style="height:100%">
+    <div class="panel-head">
+        <div class="panel-head-title">{{title}}</div>
+        <div class="panel-head-btn">
+            <a class="closeBtn" (click)="close()">关闭</a>
+        </div>
+    </div>
+    <div class="panel-body">
+        <ng-content></ng-content>
+    </div>
+</div>

@@ -1,15 +1,29 @@
 .panel {
     display: flex;
+    background-color: #fff;
     flex-direction: column;
-    .panel-head {
+    &.panel-border {
+        border: 1px solid #ddd;
+    }
+    >.panel-head {
         border-bottom: 1px solid #ddd;
         display: flex;
         flex-direction: row;
+        padding: 8px 16px;
+        line-height: 2em;
+        font-size: 15px;
+        .panel-head-btn {}
+        .panel-head-title {
+            flex: 1;
+            color: #000;
+        }
     }
-    .panel-body {
+    >.panel-body {
         flex: 1;
+        overflow: auto;
     }
-    .panel-foot {
+    >.panel-foot {
         border-top: 1px solid #ddd;
+        padding: 8px 16px;
     }
 }
