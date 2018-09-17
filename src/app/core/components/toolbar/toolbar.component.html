@@ -3,6 +3,7 @@
         <li *ngFor="let item of items" (click)="toggle(item.id)" [ngClass]="{'active':selectTool === item.id}" [nzTitle]="item.title" nzPlacement="right" nz-tooltip>
             <a>
                 <i class="{{item.icon}}"></i>
+                <span [hidden]="!showToolbarLabel">{{item.title}}</span>
             </a>
         </li>
     </ul>
@@ -13,6 +14,7 @@
         <li (click)="clear()" nzTitle="清除" nzPlacement="right" nz-tooltip>
             <a>
                 <i class="fa fa-trash"></i>
+                <span [hidden]="!showToolbarLabel">清除</span>
             </a>
         </li>
     </ul>
@@ -20,6 +22,7 @@
         <li *ngFor="let mode of mapModes" (click)="mapMode = mode.code" [ngClass]="{'active':mapMode === mode.code}" [nzTitle]="mode.title" nzPlacement="right" nz-tooltip>
             <a>
                 <i class="{{mode.icon}}"></i>
+                <span [hidden]="!showToolbarLabel">{{mode.title}}</span>
             </a>
         </li>
     </ul>

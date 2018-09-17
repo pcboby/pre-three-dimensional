@@ -1,9 +1,8 @@
 import {
-  MapperService
-} from './../../services/mapper.service';
-import {
+  LayoutService,
+  MapperService,
   NavigationService
-} from './../../services/navigation.service';
+} from '../../services';
 import {
   Component,
   OnInit
@@ -18,7 +17,7 @@ export class ToolbarComponent implements OnInit {
 
   mapModes = [];
 
-  constructor(public navigationService: NavigationService, public mapperService: MapperService) {
+  constructor(private navigationService: NavigationService, private mapperService: MapperService, private layoutService: LayoutService) {
     this.mapModes = this.mapperService.getMapModes();
   }
 
@@ -38,6 +37,10 @@ export class ToolbarComponent implements OnInit {
 
   get selectTool() {
     return this.navigationService.select_tool;
+  }
+
+  get showToolbarLabel() {
+    return this.layoutService.showToolbarLabel;
   }
 
 

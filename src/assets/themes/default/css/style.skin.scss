@@ -69,6 +69,7 @@ toolbar
     color: #fff;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .layout .layout-toolbar .tools {}

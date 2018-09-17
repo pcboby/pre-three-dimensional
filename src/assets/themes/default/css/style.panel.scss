@@ -1,0 +1,15 @@
+.panel {
+    display: flex;
+    flex-direction: column;
+    .panel-head {
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        flex-direction: row;
+    }
+    .panel-body {
+        flex: 1;
+    }
+    .panel-foot {
+        border-top: 1px solid #ddd;
+    }
+}

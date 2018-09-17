@@ -16,6 +16,7 @@ export class LayoutService {
   showFooter = true;
 
   showToolbar = true;
+  showToolbarLabel = true;
   showSidebar = true;
 
   constructor() {}
