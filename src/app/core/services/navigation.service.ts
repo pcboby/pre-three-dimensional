@@ -111,7 +111,7 @@ export class NavigationService {
 
   getNav(): object {
     let tmp = {};
-    this.navmenu.forEach((item) => {
+    this.getNavs().forEach((item) => {
       if (item.id === this.select_nav) {
         tmp = item;
       }
@@ -121,7 +121,16 @@ export class NavigationService {
   getNavs() {
     return this.navmenu;
   }
-  getTools(): object {
+  getTool(): object {
+    let tmp = {};
+    this.getTools().forEach((item) => {
+      if (item.id === this.select_tool) {
+        tmp = item;
+      }
+    });
+    return tmp;
+  }
+  getTools() {
     return this.getNav()['data'] || [];
   }
 

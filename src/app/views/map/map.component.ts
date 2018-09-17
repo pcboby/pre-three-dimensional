@@ -20,5 +20,8 @@ export class MapComponent implements OnInit {
   get sidebar_isHidden() {
     return !this.navigationService.select_tool;
   }
+  get sideTitle() {
+    return this.navigationService.getTool()['title'] || '';
+  }
 
 }

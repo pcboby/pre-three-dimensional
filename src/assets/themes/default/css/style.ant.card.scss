@@ -1,0 +1,10 @@
+.ant-card {
+    &.ant-card-flex {
+        display: flex;
+        flex-direction: column;
+        .ant-card-body {
+            flex: 1;
+            overflow: auto;
+        }
+    }
+}

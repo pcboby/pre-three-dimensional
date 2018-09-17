@@ -1,4 +1,6 @@
-<p>
+<nz-card class="ant-card-flex" style="width:100%; height:100%;" [nzTitle]="title" [nzExtra]="extraTemplate">
+    <ng-content></ng-content>
+</nz-card>
+<ng-template #extraTemplate>
     <a class="closeBtn" (click)="close()">关闭</a>
-</p>
-<ng-content></ng-content>
+</ng-template>
