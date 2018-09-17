@@ -1,12 +1,12 @@
 <div class="layout">
-    <app-header class="layout-header"></app-header>
-    <app-silder class="layout-silder"></app-silder>
+    <app-header class="layout-header" [hidden]="!showHeader"></app-header>
+    <app-silder class="layout-silder" [hidden]="!showSilder"></app-silder>
     <div class="layout-container">
-        <app-toolbar class="layout-toolbar"></app-toolbar>
+        <app-toolbar class="layout-toolbar" [hidden]="!showToolbar"></app-toolbar>
         <app-mapper class="layout-wraper"></app-mapper>
         <app-sidebar class="layout-sidebar" [title]="sideTitle" [hidden]="sidebar_isHidden">
             <app-controls></app-controls>
         </app-sidebar>
     </div>
-    <app-footer class="layout-footer"></app-footer>
+    <app-footer class="layout-footer" [hidden]="!showFooter"></app-footer>
 </div>

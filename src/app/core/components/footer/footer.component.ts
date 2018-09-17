@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LayoutService } from '../../services';
 
 @Component({
   selector: 'app-footer',
@@ -6,11 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  public projectTitle = '重庆市防汛管理三维信息系统';
-  public projectVersion = '1.0.0';
-  constructor() { }
+
+  constructor(private layoutService: LayoutService) { }
 
   ngOnInit() {
+  }
+
+  get objectName() {
+    return this.layoutService.objectName;
+  }
+
+  get objectVersion() {
+    return this.layoutService.objectVersion;
   }
 
 }

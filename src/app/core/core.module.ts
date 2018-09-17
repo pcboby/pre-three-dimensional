@@ -1,4 +1,5 @@
 import {
+  LayoutService,
   NavigationService,
   MapperService
 } from './services';
@@ -59,6 +60,7 @@ const components = [
 ];
 
 const services = [
+  LayoutService,
   NavigationService,
   MapperService
 ];
