@@ -15,6 +15,7 @@ import {
 export class SidebarComponent implements OnInit {
 
   @Input() title = '属性设置';
+  @Input() icon = 'fa fa-search';
 
   constructor(private navigationService: NavigationService) {}
 

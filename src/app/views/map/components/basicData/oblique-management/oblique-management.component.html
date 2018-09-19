@@ -1,3 +1,10 @@
-<p>
-  oblique-management works!
-</p>
+<div class="panel" style="height:100%;">
+    <div class="panel-body panel-body-space">
+        <!-- 内容 star -->
+        <nz-divider nzText="分隔线" nzOrientation="left"></nz-divider>
+        <nz-tree [(ngModel)]="nodes" [nzCheckable]="true" [nzMultiple]="true" [nzDefaultExpandedKeys]="expandKeys" [nzDefaultCheckedKeys]="checkedKeys" [nzDefaultSelectedKeys]="selectedKeys" [nzDefaultExpandAll]="expandDefault" (nzClick)="mouseAction('click',$event)"
+            (nzDblClick)="mouseAction('dblclick', $event)">
+        </nz-tree>
+        <!-- 内容 end -->
+    </div>
+</div>

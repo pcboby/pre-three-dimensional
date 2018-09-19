@@ -1,9 +1,12 @@
 <div class="panel" style="height:100%;">
     <div class="panel-body panel-body-space">
         <!-- 内容 star -->
-
         <nz-divider nzText="点渲染" nzOrientation="left"></nz-divider>
-        <button nz-button nzType="default" nzBlock>点渲染</button>
+        <button nz-button nzType="default" nzBlock (click)="pointRender()">点渲染</button>
+        <nz-divider nzText="线渲染" nzOrientation="left"></nz-divider>
+        <button nz-button nzType="default" nzBlock (click)="lineRender()">线渲染</button>
+        <nz-divider nzText="面渲染" nzOrientation="left"></nz-divider>
+        <button nz-button nzType="default" nzBlock (click)="polygonRender()">面渲染</button>
         <!-- 内容 end -->
     </div>
 </div>

@@ -24,6 +24,9 @@ export class MapComponent implements OnInit {
   get sideTitle() {
     return this.navigationService.getTool()['title'] || '';
   }
+  get sideIcon() {
+    return this.navigationService.getTool()['icon'] || '';
+  }
   get showHeader() {
     return this.layoutService.showHeader;
   }

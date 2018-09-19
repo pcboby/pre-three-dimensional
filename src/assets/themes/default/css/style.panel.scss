@@ -9,9 +9,12 @@
         border-bottom: 1px solid #ddd;
         display: flex;
         flex-direction: row;
-        padding: 8px 16px;
+        padding: 8px;
         line-height: 2em;
         font-size: 15px;
+        i {
+            margin-right: .5em;
+        }
         .panel-head-btn {}
         .panel-head-title {
             flex: 1;
@@ -22,7 +25,7 @@
         flex: 1;
         overflow: auto;
         &.panel-body-space {
-            padding: 16px;
+            padding: 8px 16px;
         }
     }
     >.panel-foot {
