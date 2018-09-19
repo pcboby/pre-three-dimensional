@@ -1,3 +1,8 @@
 <nz-tree [(ngModel)]="nodes" [nzCheckable]="true" [nzMultiple]="true" [nzDefaultExpandedKeys]="expandKeys" [nzDefaultCheckedKeys]="checkedKeys" [nzDefaultSelectedKeys]="selectedKeys" [nzDefaultExpandAll]="expandDefault" (nzClick)="mouseAction('click',$event)"
     (nzDblClick)="mouseAction('dblclick', $event)">
 </nz-tree>
+
+<button (click)="test()">调用</button>
+<button (click)="test1()">传参</button>
+<button (click)="test2()">返回</button>
+<button (click)="testX()">综合</button>

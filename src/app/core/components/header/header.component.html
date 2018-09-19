@@ -1,4 +1,7 @@
-<div class="logo">logo</div>
+<div class="logo">
+    <i class="fa fa-google-wallet"></i>
+    <span>3D<font>Ark</font>Map</span>
+</div>
 <div class="navs">
     <ul>
         <li *ngFor="let item of items" (click)="select(item.id)" [ngClass]="{'active':selectNav === item.id}">
@@ -9,4 +12,13 @@
         </li>
     </ul>
 </div>
-<div class="quick">quick</div>
+<div class="quick">
+    <nz-input-group nzSuffixIcon="anticon anticon-search">
+        <input type="text" nz-input placeholder="input search text">
+    </nz-input-group>
+</div>
+<div class="quick">
+    <nz-badge [nzCount]="5" style="margin-right: 24px;">
+        <nz-avatar [nzSize]="'large'" nzIcon="anticon anticon-user" [nzSrc]="userPhoto"></nz-avatar>
+    </nz-badge>
+</div>

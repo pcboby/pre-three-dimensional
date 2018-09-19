@@ -13,6 +13,8 @@ import {
 })
 export class HeaderComponent implements OnInit {
 
+  userPhoto = null; // '//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png';
+
   constructor(private navigationService: NavigationService) {}
 
   ngOnInit() {}

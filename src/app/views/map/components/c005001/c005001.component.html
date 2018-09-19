@@ -1,4 +1,4 @@
-<div class="card mb-3">
+<!-- <div class="card mb-3">
     <div class="card-header">
         Bar Chart
     </div>
@@ -10,7 +10,7 @@
         <button class="btn btn-info btn-sm" (click)="randomize()">Update</button>
     </div>
 </div>
-<!--  -->
+
 <div class="card mb-3">
     <div class="card-header">
         Doughnut Chart
@@ -20,7 +20,7 @@
         </canvas>
     </div>
 </div>
-<!--  -->
+
 <div class="card mb-3">
     <div class="card-header">
         Radar Chart
@@ -30,7 +30,7 @@
         </canvas>
     </div>
 </div>
-<!--  -->
+
 <div class="card mb-3">
     <div class="card-header">
         Pie Chart
@@ -40,7 +40,7 @@
         </canvas>
     </div>
 </div>
-<!--  -->
+
 <div class="card mb-3">
     <div class="card-header">
         Polar Area Chart
@@ -50,7 +50,7 @@
         </canvas>
     </div>
 </div>
-<!--  -->
+
 <div class="card mb-3">
     <div class="card-header">
         Line Chart
@@ -58,5 +58,29 @@
     <div class="card-body">
         <canvas baseChart height="130" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
         </canvas>
+    </div>
+</div> -->
+
+<div class="panel" style="height:100%;">
+    <div class="panel-body">
+        <!-- 内容 star -->
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+          </canvas>
+        <!-- 内容 end -->
+    </div>
+    <div class="panel-foot">
+        <!-- 按钮 star-->
+        <nz-button-group>
+            <button nz-button>
+            <i class="anticon anticon-play-circle"></i>播放
+      </button>
+            <button nz-button>
+            <i class="anticon anticon-pause-circle"></i>暂停
+      </button>
+            <button nz-button>
+            <i class="anticon anticon-close-circle"></i>停止
+      </button>
+        </nz-button-group>
+        <!-- 按钮 end -->
     </div>
 </div>

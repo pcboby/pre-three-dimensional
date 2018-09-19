@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'pcFont';
-    src: url('../fonts/Untitled1.ttf'), url('../fonts/Untitled1.woff');
+    src: url('../fonts/Untitled1.eot');
+    src: local('☺'), url('../fonts/Untitled1.woff') format('woff'), url('../fonts/Untitled1.ttf') format('truetype'), url('../fonts/Untitled1.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }

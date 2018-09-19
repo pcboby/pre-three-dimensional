@@ -22,17 +22,41 @@ header
     height: 64px;
     line-height: 64px;
     background-color: #20A0FF;
+    // background-color: #000;
+    background-color: #1976d2;
     color: #fff;
     display: flex;
     flex-direction: row;
     padding: 0 10px;
     .logo {
-        width: 220px;
+        position: relative;
+        min-width: 268px;
+        font-size: 28px;
+        padding-left: 10px;
+        padding-right: 48px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        i {
+            margin-right: .525em;
+        }
+        font {}
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 25%;
+            bottom: 25%;
+            right: 32px;
+            width: 1px;
+            background-color: rgba($color: #fff, $alpha: .3);
+        }
     }
     .navs {
         flex: 1;
     }
-    .quick {}
+    .quick {
+        padding: 0 5px;
+    }
 }
 
 

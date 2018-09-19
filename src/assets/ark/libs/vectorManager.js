@@ -58,34 +58,34 @@ function initVectorTree() {
 
 function getVectorTreeData() {
     var zNodes = [];
-        var vectorManager = getPlugin().VectorManager;
-        allTypes = JSON.parse(vectorManager.AllTypes);
-        console.log(allTypes);
-        allTypes = allTypes.Types;
-        for (var i = 0; i < allTypes.length; i++) {
+    var vectorManager = getPlugin().VectorManager;
+    allTypes = JSON.parse(vectorManager.AllTypes);
+    console.log(allTypes);
+    allTypes = allTypes.Types;
+    for (var i = 0; i < allTypes.length; i++) {
+        zNodes.push({
+            id: i + 1,
+            pId: 0,
+            name: allTypes[i]
+        });
+        var typeNodes = JSON.parse(vectorManager.TypeNodes(allTypes[i]));
+        typeNodes = typeNodes.ID;
+        vectorTreeNodes.push(typeNodes);
+        for (var j = 0; j < typeNodes.length; j++) {
+            var vectorUid = typeNodes[j],
+                vectorName = vectorManager.Name(vectorUid),
+                vectorVsible = vectorManager.Visible(vectorUid);
             zNodes.push({
-                id: i + 1,
-                pId: 0,
-                name: allTypes[i]
+                id: (i + 1) + "-" + (j + 1),
+                pId: i + 1,
+                name: vectorName,
+                checked: vectorVsible
             });
-            var typeNodes = JSON.parse(vectorManager.TypeNodes(allTypes[i]));
-            typeNodes = typeNodes.ID;
-            vectorTreeNodes.push(typeNodes);
-            for (var j = 0; j < typeNodes.length; j++) {
-                var vectorUid = typeNodes[j],
-                    vectorName = vectorManager.Name(vectorUid),
-                    vectorVsible = vectorManager.Visible(vectorUid);
-                zNodes.push({
-                    id: (i + 1) + "-" + (j + 1),
-                    pId: i + 1,
-                    name: vectorName,
-                    checked: vectorVsible
-                });
-            }
         }
-        return zNodes;
+    }
+    return zNodes;
 }
 
 $(function() {
-    initVectorTree();
+    // initVectorTree();
 })

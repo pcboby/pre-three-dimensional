@@ -1,0 +1,22 @@
+.listGroup {
+    ul {
+        li {
+            border-bottom: 1px solid #eee;
+            &:first-child {
+                border-top: 1px solid #eee;
+            }
+            &:hover {
+                background-color: rgb(234, 255, 239);
+            }
+        }
+    }
+}
+
+.listGroup-item {
+    line-height: 1.325em;
+    label {
+        line-height: 1.875em;
+        display: block;
+        padding: 8px 16px;
+    }
+}

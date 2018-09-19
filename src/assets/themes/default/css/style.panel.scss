@@ -21,6 +21,9 @@
     >.panel-body {
         flex: 1;
         overflow: auto;
+        &.panel-body-space {
+            padding: 16px;
+        }
     }
     >.panel-foot {
         border-top: 1px solid #ddd;

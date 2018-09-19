@@ -4,8 +4,8 @@ import {
   ElementRef
 } from '@angular/core';
 
-import * as $ from 'jquery';
 import * as _ from 'lodash';
+import untils from '../../../config/untils';
 
 @Component({
   selector: 'app-map-ark',
@@ -16,13 +16,8 @@ export class MapArkComponent implements OnInit {
   constructor(public el: ElementRef) {
 
   }
-
-  ngOnInit() {
-    // 此方法OK
-    // setTimeout(() => {
-    //   document.querySelector('#ArkObj')['Initialize']('http://192.168.31.47:8081/assets/Data/Terrains/ChongQing.arkpro');
-    // }, 0);
-
-    console.log($('iframe'));
+  get isIE() {
+    return untils().IE() > 10;
   }
+  ngOnInit() {}
 }

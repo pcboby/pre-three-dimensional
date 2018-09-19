@@ -8,10 +8,97 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        .spinner {
+            position: fixed;
+            top: 50%;
+            margin-top: -72px;
+            width: 100%;
+            z-index: 9999;
+            text-align: center;
+        }
+        
+        .spinner-point {
+            display: inline-block;
+            background: #666;
+            height: 10px;
+            width: 10px;
+            opacity: 0;
+            border-radius: 50%;
+            transform: translateX(-300px);
+            background-color: #4b9cdb;
+            animation: k-loadingS 4s infinite;
+        }
+        
+        .spinner-point.spinner-point-1 {
+            animation-delay: .8s
+        }
+        
+        .spinner-point.spinner-point-2 {
+            animation-delay: .7s
+        }
+        
+        .spinner-point.spinner-point-3 {
+            animation-delay: .6s
+        }
+        
+        .spinner-point.spinner-point-4 {
+            animation-delay: .5s
+        }
+        
+        .spinner-point.spinner-point-5 {
+            animation-delay: .4s
+        }
+        
+        .spinner-point.spinner-point-6 {
+            animation-delay: .3s
+        }
+        
+        .spinner-point.spinner-point-7 {
+            animation-delay: .2s
+        }
+        
+        .spinner-point.spinner-point-8 {
+            animation-delay: .1s
+        }
+        
+        @keyframes k-loadingS {
+            40% {
+                transform: translateX(0);
+                opacity: .8
+            }
+            100% {
+                transform: translateX(300px);
+                opacity: 0
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <app-root></app-root>
+
+    <app-root>
+        <div class="spinner">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" version="1.1" viewBox="0 -256 1792 1792">
+                  <g transform="matrix(1 0 0 -1 0 1536)">
+                   <path fill="#1976d2"
+                d="M441 864q33 0 52 -26q266 -364 362 -774h-446q-127 441 -367 749q-12 16 -3 33.5t29 17.5h373zM1000 507q-49 -199 -125 -393q-79 310 -256 594q40 221 44 449q211 -340 337 -650zM1099 1216q235 -324 384.5 -698.5t184.5 -773.5h-451q-41 665 -553 1472h435zM1792 640
+                q0 -424 -101 -812q-67 560 -359 1083q-25 301 -106 584q-4 16 5.5 28.5t25.5 12.5h359q21 0 38.5 -13t22.5 -33q115 -409 115 -850z" />
+                  </g>
+                </svg>
+            </div>
+            <div class="spinner-point spinner-point-1"></div>
+            <div class="spinner-point spinner-point-2"></div>
+            <div class="spinner-point spinner-point-3"></div>
+            <div class="spinner-point spinner-point-4"></div>
+            <div class="spinner-point spinner-point-5"></div>
+            <div class="spinner-point spinner-point-6"></div>
+            <div class="spinner-point spinner-point-7"></div>
+            <div class="spinner-point spinner-point-8"></div>
+            <p>正在加载，请稍等...</p>
+        </div>
+    </app-root>
 </body>
 
 </html>

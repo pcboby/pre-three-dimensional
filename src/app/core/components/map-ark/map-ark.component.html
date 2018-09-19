@@ -5,4 +5,18 @@
   <param name="_ExtentY" value="13229">
   <param name="_StockProps" value="0">
 </object> -->
-<iframe src="/assets/demo/ark.html" id="_iframe" name="_iframe" frameborder="0" width="100%" height="100%"></iframe>
+<ng-container *ngIf="isIE">
+    <iframe src="/assets/ark/index.html" id="arkIframe" name="arkIframe" frameborder="0" width="100%" height="100%" style="position: absolute; z-index: -1;scrolling: no;"></iframe>
+</ng-container>
+<ng-container *ngIf="!isIE">
+    <div class="error">
+        <div>
+            <p>
+                <nz-spin [nzSize]="'large'"></nz-spin>
+            </p>
+            <p>
+                Sorry, The ArkMap must be use IE10+ ~
+            </p>
+        </div>
+    </div>
+</ng-container>
