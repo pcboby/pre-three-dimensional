@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-buffer-analyze',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BufferAnalyzeComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+  pointBuffer() {}
+  lineBuffer() {}
+  areaBuffer() {}
 
 }

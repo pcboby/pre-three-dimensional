@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-label-pan',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LabelPanComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+  pointLabel() {}
+  polylineLabel() {}
+  polygonLabel() {}
+  rectangleLabel() {}
+  circleLabel() {}
+  ellipseLabel() {}
+  arcLabel() {}
+  sectorLabel() {}
+
 
 }

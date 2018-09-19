@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-render-mode',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RenderModeComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+  pointRender() {}
+  lineRender() {}
+  polygonRender() {}
 
 }

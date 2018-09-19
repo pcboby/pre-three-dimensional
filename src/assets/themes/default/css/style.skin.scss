@@ -133,3 +133,9 @@ footer
         text-align: right;
     }
 }
+
+.ant-divider-horizontal.ant-divider-with-text,
+.ant-divider-horizontal.ant-divider-with-text-left,
+.ant-divider-horizontal.ant-divider-with-text-right {
+    font-size: 13px !important;
+}

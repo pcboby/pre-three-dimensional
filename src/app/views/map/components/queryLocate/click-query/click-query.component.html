@@ -1,3 +1,10 @@
-<p>
-  click-query works!
-</p>
+<div class="panel" style="height:100%;">
+    <div class="panel-body panel-body-space">
+        <!-- 内容 star -->
+        <nz-divider nzText="矢量查询" nzOrientation="left"></nz-divider>
+        <button nz-button nzType="default" nzBlock (click)="queryVector()">矢量查询</button>
+        <nz-divider nzText="模型查询" nzOrientation="left"></nz-divider>
+        <button nz-button nzType="default" nzBlock (click)="queryFixedModel()">模型查询</button>
+        <!-- 内容 end -->
+    </div>
+</div>
