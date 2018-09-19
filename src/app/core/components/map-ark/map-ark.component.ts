@@ -6,6 +6,7 @@ import {
 
 import * as _ from 'lodash';
 import untils from '../../../config/untils';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-map-ark',
@@ -13,9 +14,10 @@ import untils from '../../../config/untils';
   styleUrls: ['./map-ark.component.css']
 })
 export class MapArkComponent implements OnInit {
-  constructor(public el: ElementRef) {
 
-  }
+  isDev = !environment.production;
+
+  constructor(public el: ElementRef) {}
   get isIE() {
     return untils().IE() > 10;
   }

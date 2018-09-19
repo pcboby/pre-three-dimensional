@@ -7,15 +7,15 @@ $(function() {
 
 
 function test() {
-    console.log('arkHtml111')
+    console.log('arkHtml111');
 }
 
 function test1(val) {
-    console.info('arkHtml:', val)
+    console.info('arkHtml:', val);
 }
 
 function test2() {
-    console.info('arkHtml:')
+    console.info('arkHtml:');
     return {
         a: 'aaaa',
         b: 'bbbb'

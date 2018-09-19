@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment';
 import {
   Injectable
 } from '@angular/core';
@@ -11,17 +12,20 @@ export class MapperService {
     name: 'Flash',
     code: 'flash',
     title: 'FlashMap',
-    icon: 'fa fa-medium'
+    icon: 'fa fa-medium',
+    show: !environment.production
   }, {
     name: 'Cesium',
     code: 'cesium',
     title: 'CesiumMap',
-    icon: 'fa fa-globe'
+    icon: 'fa fa-globe',
+    show: !environment.production
   }, {
     name: 'Ark',
     code: 'ark',
     title: 'ArkMap',
-    icon: 'fa fa-google-wallet'
+    icon: 'fa fa-google-wallet',
+    show: true
   }];
   constructor() {}
 

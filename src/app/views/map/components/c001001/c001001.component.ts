@@ -62,7 +62,10 @@ export class C001001Component implements OnInit {
   }
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    const data = untils().ArkMap().getVectorTreeData();
+    console.log(data);
+  }
 
   test() {
     console.log('do test');
