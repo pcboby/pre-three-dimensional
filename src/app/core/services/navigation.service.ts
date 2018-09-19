@@ -8,101 +8,129 @@ import {
 export class NavigationService {
 
   private navmenu = [{
-    id: '001',
+    id: 'basicData',
     title: '基础数据',
     icon: 'pIcon pIcon-001',
     data: [{
-      id: '001',
+      id: 'modelManagement',
       title: '模型管理',
-      icon: 'pIcon pIcon-001001',
+      icon: 'pIcon pIcon-001'
     }, {
-      id: '002',
+      id: 'themeManagement',
       title: '专题管理',
-      icon: 'pIcon pIcon-001002',
+      icon: 'pIcon pIcon-001'
     }, {
-      id: '003',
+      id: 'obliqueManagement',
       title: '倾斜管理',
-      icon: 'pIcon pIcon-001003',
-    }]
-  }, {
-    id: '002',
-    title: '漫游标注',
-    icon: 'pIcon pIcon-002',
-    data: [{
-      id: '001',
-      title: '三维漫游',
-      icon: 'pIcon pIcon-002001',
+      icon: 'pIcon pIcon-001'
     }, {
-      id: '002',
-      title: '标注',
-      icon: 'pIcon pIcon-002002',
+      id: 'renderMode',
+      title: '渲染模式',
+      icon: 'pIcon pIcon-001'
     }]
   }, {
-    id: '003',
+    id: 'queryLocate',
     title: '查询定位',
     icon: 'pIcon pIcon-003',
     data: [{
-      id: '001',
+      id: 'clickQuery',
       title: '点击查询',
-      icon: 'pIcon pIcon-003001',
+      icon: 'pIcon pIcon-002'
     }, {
-      id: '002',
+      id: 'attributeQuery',
       title: '属性查询',
-      icon: 'pIcon pIcon-003002',
+      icon: 'pIcon pIcon-002'
     }]
   }, {
-    id: '004',
-    title: '分晰量算',
+    id: 'analyzeCalculate',
+    title: '分析量算',
     icon: 'pIcon pIcon-004',
     data: [{
-      id: '001',
+      id: 'distanceCalculate',
       title: '距离量算',
-      icon: 'pIcon pIcon-004001',
+      icon: 'pIcon pIcon-003'
     }, {
-      id: '002',
+      id: 'areaCalculate',
       title: '面积量算',
-      icon: 'pIcon pIcon-004002',
+      icon: 'pIcon pIcon-003'
     }, {
-      id: '003',
+      id: 'heightCalculate',
       title: '高度量算',
-      icon: 'pIcon pIcon-004003',
+      icon: 'pIcon pIcon-003'
     }, {
-      id: '004',
-      title: '剖面分析',
-      icon: 'pIcon pIcon-004004',
+      id: 'terrainDistanceCalculate',
+      title: '地形距离量算',
+      icon: 'pIcon pIcon-003'
     }, {
-      id: '005',
+      id: 'terrainAreaCalculate',
+      title: '地形面积量算',
+      icon: 'pIcon pIcon-003'
+    }, {
+      id: 'angleCalculate',
+      title: '角度量算',
+      icon: 'pIcon pIcon-003'
+    }, {
+      id: 'coordinateCalculate',
+      title: '坐标显示',
+      icon: 'pIcon pIcon-003'
+    }, {
+      id: 'sectionAnalyze',
+      title: '地形剖面分析',
+      icon: 'pIcon pIcon-003'
+    }, {
+      id: 'fillDigAnalyze',
       title: '地形开挖分析',
-      icon: 'pIcon pIcon-004005',
+      icon: 'pIcon pIcon-003'
     }, {
-      id: '006',
+      id: 'bufferAnalyze',
       title: '缓冲区分析',
-      icon: 'pIcon pIcon-004006',
+      icon: 'pIcon pIcon-003'
     }, {
-      id: '007',
+      id: 'waterAnalyze',
+      title: '画水分析',
+      icon: 'pIcon pIcon-003'
+    }, {
+      id: 'overlayAnalyze',
       title: '空间叠加分析',
-      icon: 'pIcon pIcon-004007',
+      icon: 'pIcon pIcon-003'
     }, {
-      id: '008',
-      title: '坡反分析',
-      icon: 'pIcon pIcon-004008',
+      id: 'slopeAnalyze',
+      title: '坡度分析',
+      icon: 'pIcon pIcon-003'
+    }, {
+      id: 'visualAnalyze',
+      title: '通视分析',
+      icon: 'pIcon pIcon-003'
     }]
   }, {
-    id: '005',
-    title: '演进展示',
+    id: 'panLabel',
+    title: '漫游标注',
+    icon: 'pIcon pIcon-002',
+    data: [{
+      id: 'threeDimensionalPan',
+      title: '三维漫游',
+      icon: 'pIcon pIcon-004'
+    }, {
+      id: 'labelPan',
+      title: '标注',
+      icon: 'pIcon pIcon-004'
+    }]
+  }, {
+    id: 'performance',
+    title: '演进进展',
     icon: 'pIcon pIcon-005',
     data: [{
-      id: '001',
+      id: 'floodDeduction',
       title: '洪水推演',
-      icon: 'pIcon pIcon-005001',
+      icon: 'pIcon pIcon-005'
     }, {
-      id: '002',
+      id: 'submergenceAnalysis',
       title: '淹没分析',
-      icon: 'pIcon pIcon-005002',
+      icon: 'pIcon pIcon-005'
     }]
   }];
 
-  public select_nav = '001';
+  public select_nav = 'basicData';
   public select_tool = null;
 
 
