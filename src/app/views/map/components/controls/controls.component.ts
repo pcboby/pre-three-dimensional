@@ -19,6 +19,6 @@ export class ControlsComponent implements OnInit {
   ngOnInit() {}
 
   get controlId() {
-    return (this.navigationService.select_nav || '') + (this.navigationService.select_tool || '');
+    return this.navigationService.select_tool || '';
   }
 }
