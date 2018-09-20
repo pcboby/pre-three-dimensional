@@ -19,8 +19,8 @@ export class MapArkComponent implements OnInit {
 
   constructor(public el: ElementRef) {}
   get isIE() {
-    return true;
-    // return untils().IE() > 10;
+    // return true;
+    return untils().IE() > 10;
   }
   ngOnInit() {}
 }
