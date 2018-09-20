@@ -7,6 +7,7 @@ import {
   Component,
   OnInit
 } from '@angular/core';
+import untils from '../../../config/untils';
 
 @Component({
   selector: 'app-toolbar',
@@ -46,13 +47,9 @@ export class ToolbarComponent implements OnInit {
 
   toggle(key: string) {
     this.navigationService.select_tool = this.selectTool === key ? null : key;
-  }
+  };
 
   clear() {
-    console.log('do map clear~~');
-  }
-  // setMapMode(val) {
-  //   console.log('setMapMode', val);
-  //   this.mapperService.mapMode = val;
-  // }
+    untils().ArkMap().ClearAll();
+  };
 }

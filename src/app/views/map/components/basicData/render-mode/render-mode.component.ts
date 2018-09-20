@@ -18,14 +18,13 @@ export class RenderModeComponent implements OnInit {
    * functions
    */
   pointRender() {
-    // untils().ArkMap().test1('111');
-    // console.log(untils().ArkMapRef()['ArkScene']);
-            // var url = 'http://' + window.location.host + '/assets/Data/Terrains/ChongQing.arkpro';
-            // untils().ArkMapRef()['Initialize'](url);
-            // untils().ArkMapRef()['ArkScene']['RenderMode'] = 0
-            untils().ArkMap().RenderModePoint();
-  }
-  lineRender() {}
-  polygonRender() {}
+    untils().ArkMap().RenderModePoint();
+  };
+  lineRender() {
+    untils().ArkMap().RenderModeLine();
+  };
+  polygonRender() {
+    untils().ArkMap().RenderModeFill();
+  };
 
 }
