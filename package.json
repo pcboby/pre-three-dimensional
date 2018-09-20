@@ -3,9 +3,9 @@
     "version": "0.0.0",
     "scripts": {
         "ng": "ng",
-        "insall": "npm run regsvr32 && npm run install:angular && npm run install:httpServer && npm i",
-        "install:angular": "npm i -g @angular/cli",
-        "install:httpServer": "npm i -g http-server",
+        "setup": "npm run setup:angular && npm run setup:httpServer && npm i",
+        "setup:angular": "npm i -g @angular/cli",
+        "setup:httpServer": "npm i -g http-server",
         "start": "npm run dev",
         "dev": "ng serve --port 8008",
         "prod": "npm run build && npm run httpServer",
