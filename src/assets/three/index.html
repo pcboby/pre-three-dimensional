@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<script src="zTree/jquery-1.4.4.min.js"></script>
+<script src="zTree/jquery.ztree.core.min.js"></script>
+<script src="zTree/jquery.ztree.excheck.min.js"></script>
+<!-- <script src="index.js"></script> -->
+<script src="Ark3D_Config.js"></script>
+<script src="Ark3D_Common.js"></script>
+<script src="Ark3D_TreeUI.js"></script>
+
+<link rel="stylesheet" href="zTree/zTreeStyle/zTreeStyle.css" />
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<head>
+    <meta charset="utf-8">
+    <title>ArkTest</title>
+</head>
+<script type="text/javascript" FOR="ArkObj" EVENT="OnToolEvent(strJosn)">
+    OnToolEvent_ElementDraw(strJosn);
+    OnToolEvent_Analysis(strJosn);
+    OnToolEvent_Query(strJosn);
+</script>
+
+<script type="text/javascript" FOR="ArkObj" EVENT="OnDataLoadingEvent(status, info, progress)">
+    //alert(status);
+    //alert(info);
+    //alert(progress);
+</script>
+
+<body>
+    <div id="treeContainer">
+        <div class="tree">
+            <div>模型</div>
+            <ul id="fixedModel_tree" class="ztree"></ul>
+        </div>
+        <div class="tree">
+            <div>漫游路径</div>
+            <ul id="naviPath_tree" class="ztree"></ul>
+        </div>
+    </div>
+    <div id="buttonContainer">
+        <button type="button" onclick="RenderModePoint()">点渲染</button>
+        <button type="button" onclick="RenderModeLine()">线渲染</button>
+        <button type="button" onclick="RenderModeFill()">面渲染</button>
+
+        <button type="button" onclick="MeasureDist()">测距</button>
+        <button type="button" onclick="MeasureTerrDist()">地形距离</button>
+        <button type="button" onclick="MeasureArea()">面积</button>
+        <button type="button" onclick="MeasureTerrArea()">地形面积</button>
+        <button type="button" onclick="MeasureHeight()">高度</button>
+        <button type="button" onclick="MeasureAngle()">角度</button>
+        <button type="button" onclick="MeasureCoordinate()">坐标</button>
+
+        <button type="button" onclick="AnalyzeSection()">断面</button>
+        <button type="button" onclick="AnalyzeFillDig()">填挖方</button>
+        <button type="button" onclick="AnalyzeWater()">画水</button>
+
+        <br/>
+
+        <button type="button" onclick="ClearAll()">清除</button>
+        <button type="button" onclick="DrawPoint()">点</button>
+        <button type="button" onclick="DrawPolyline()">线</button>
+        <button type="button" onclick="DrawPolygon()">多边形</button>
+        <button type="button" onclick="DrawRect()">矩形</button>
+        <button type="button" onclick="DrawCircle()">圆</button>
+        <button type="button" onclick="DrawEllipse()">椭圆</button>
+        <button type="button" onclick="DrawArc()">弧</button>
+        <button type="button" onclick="DrawSector()">扇形</button>
+
+        <button type="button" onclick="QueryVector()">查询矢量</button>
+        <button type="button" onclick="QueryFixedModel()">模型查询</button>
+
+        <br/>
+        <button type="button" onclick="SA_PointBuffer()">点缓冲区</button>
+        <button type="button" onclick="SA_LineBuffer()">线缓冲区</button>
+        <button type="button" onclick="SA_AreaBuffer()">面缓冲区</button>
+
+        <button type="button" onclick="FloodProc_Init()">淹没分析加载</button>
+        <button type="button" onclick="FloodProc_StepIt()">淹没分析Step</button>
+        <button type="button" onclick="FloodProc_ResetStep()">淹没分析重置</button>
+        <button type="button" onclick="FloodProc_UnInit()">淹没分析清除</button>
+
+    </div>
+    <div id="scene">
+        <OBJECT ID="ArkObj" WIDTH='100%' HEIGHT='90%' CLASSID="CLSID:0BCAF84B-7570-4A96-9528-542A77E6606A">
+            <PARAM NAME="_Version" VALUE="65536">
+            <PARAM NAME="_ExtentX" VALUE="13229">
+            <PARAM NAME="_ExtentY" VALUE="13229">
+            <PARAM NAME="_StockProps" VALUE="0">
+        </OBJECT>
+    </div>
+</body>
+
+</html>

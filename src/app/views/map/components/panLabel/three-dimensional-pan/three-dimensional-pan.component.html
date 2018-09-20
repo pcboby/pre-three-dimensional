@@ -1,6 +1,15 @@
 <div class="panel" style="height:100%;">
     <div class="panel-body panel-body-space">
         <!-- 内容 star -->
+        <div class="listGroup">
+            <ul>
+                <li *ngFor="let d of data">
+                    <div class="listGroup-item">
+                        <label nz-checkbox [(ngModel)]="d.checked">{{d.title}}</label>
+                    </div>
+                </li>
+            </ul>
+        </div>
         <nz-divider nzText="分隔线" nzOrientation="left"></nz-divider>
         <!-- 内容 end -->
     </div>

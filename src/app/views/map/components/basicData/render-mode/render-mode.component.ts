@@ -20,9 +20,10 @@ export class RenderModeComponent implements OnInit {
   pointRender() {
     // untils().ArkMap().test1('111');
     // console.log(untils().ArkMapRef()['ArkScene']);
-            var url = 'http://' + window.location.host + '/assets/Data/Terrains/ChongQing.arkpro';
-            untils().ArkMapRef()['Initialize'](url);
-            untils().ArkMapRef()['ArkScene']['RenderMode'] = 0
+            // var url = 'http://' + window.location.host + '/assets/Data/Terrains/ChongQing.arkpro';
+            // untils().ArkMapRef()['Initialize'](url);
+            // untils().ArkMapRef()['ArkScene']['RenderMode'] = 0
+            untils().ArkMap().RenderModePoint();
   }
   lineRender() {}
   polygonRender() {}
