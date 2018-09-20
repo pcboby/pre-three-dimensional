@@ -30,12 +30,30 @@
             getPlugin().UnInitialize();
         };
         $(function() {
-            var host = window.location.host;
-            var servicesPath = 'http://' + host + '/assets/Data/';
-            var url = servicesPath + "Terrains/ChongQing.arkpro";
-            console.log(url, getPlugin());
-            getPlugin().Initialize(url);
+            // var host = window.location.host;
+            // var servicesPath = 'http://' + host + '/assets/Data/';
+            // var url = servicesPath + "Terrains/ChongQing.arkpro";
+            // console.log(url, getPlugin());
+            // getPlugin().Initialize(url);
         });
+
+
+        
+function test() {
+    console.log('arkHtml111');
+}
+
+function test1(val) {
+    console.info('arkHtml:', val);
+}
+
+function test2() {
+    console.info('arkHtml:');
+    return {
+        a: 'aaaa',
+        b: 'bbbb'
+    }
+}
     </script>
 
     <style>
