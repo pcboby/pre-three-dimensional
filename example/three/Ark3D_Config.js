@@ -1,16 +1,16 @@
-﻿
-// Plugin
+﻿// Plugin
 function getPlugin() {
     return document.getElementById('ArkObj');
 }
 
-$(function () {
-    getPlugin().Initialize("Y:/Project/重庆防汛管理信息化/Data/Terrains/ChongQing.arkpro");
-    
+$(function() {
+    // getPlugin().Initialize("Y:/Project/重庆防汛管理信息化/Data/Terrains/ChongQing.arkpro");
+
+    getPlugin().Initialize("E:/works/github/pre-three-dimensional/src/assets/Data/Terrains/ChongQing.arkpro");
     //getPlugin().Initialize("D:/3D/Data/Globe/Terrains/globe.arkpro");
-    
-    initFixedModelTree();
-    initNaviPathTree();
+
+    // initFixedModelTree();
+    // initNaviPathTree();
 })
 
 window.onbeforeunload = function(event) {

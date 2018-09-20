@@ -137,9 +137,9 @@ function initNaviPathTree() {
 
 $(function() {
     //getPlugin().Initialize("Y:/Project/重庆防汛管理信息化/Data/Terrains/ChongQing.arkpro");
-    
-    getPlugin().Initialize("D:/3D/Data/Globe/Terrains/globe.arkpro");
-    
-    initFixedModelTree();
-    initNaviPathTree();
+
+    // getPlugin().Initialize("D:/3D/Data/Globe/Terrains/globe.arkpro");
+
+    // initFixedModelTree();
+    // initNaviPathTree();
 })

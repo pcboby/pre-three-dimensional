@@ -1,4 +1,4 @@
-﻿var fixedModelTreeNodes = [];
+var fixedModelTreeNodes = [];
 
 function fixedModelTreeOnCheck(event, treeId, treeNode) {
     var parentNode = treeNode.getParentNode(),
@@ -135,11 +135,23 @@ function initNaviPathTree() {
     $.fn.zTree.init($("#naviPath_tree"), naviPathTreeSetting, getNaviPathTreeData());
 }
 
+function button1_clicked() {
+    getPlugin().ArkScene.ToolManager.DeactiveTool();
+}
+
+function button2_clicked() {
+    getPlugin().ArkScene.ToolManager.ActiveTool = "SingleSelect_Tool";
+}
+
+function getPlugin() {
+    return document.getElementById('ArkObj');
+}
+
 $(function() {
-    //getPlugin().Initialize("Y:/Project/重庆防汛管理信息化/Data/Terrains/ChongQing.arkpro");
-
-    // getPlugin().Initialize("D:/3D/Data/Globe/Terrains/globe.arkpro");
-
-    // initFixedModelTree();
-    // initNaviPathTree();
+    getPlugin().Initialize("Y:/Project/重庆防汛管理信息化/Data/Terrains/ChongQing.arkpro");
+    initFixedModelTree();
+    initNaviPathTree();
+    getPlugin().ArkScene.ToolManager.CreateTool(5, "vectorquery");
+    $("#button1").click(button1_clicked);
+    $("#button2").click(button2_clicked);
 })

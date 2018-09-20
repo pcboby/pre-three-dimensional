@@ -1,24 +1,17 @@
 ﻿// Plugin
-function getPlugin() {
-    return document.getElementById('ArkObj');
-}
+// function getPlugin() {
+//     return document.getElementById('ArkObj');
+// }
 
-$(function() {
-    // var url = 'Y:/Project/重庆防汛管理信息化/Data/Terrains/ChongQing.arkpro';// OK
+// $(function() {
+//     // getPlugin().Initialize("Y:/Project/重庆防汛管理信息化/Data/Terrains/ChongQing.arkpro");
 
-    var url = 'http://' + window.location.host + '/assets/Data/Terrains/ChongQing.arkpro'; // 有问题，无属性
+//     getPlugin().Initialize("E:/works/github/pre-three-dimensional/src/assets/Data/Terrains/ChongQing.arkpro");
+//     //getPlugin().Initialize("D:/3D/Data/Globe/Terrains/globe.arkpro");
 
-    // var url = 'E:/works/github/pre-three-dimensional/src/assets/Data/Terrains/ChongQing.arkpro'// OK;
-
-
-
-    getPlugin().Initialize(url);
-
-    //getPlugin().Initialize("D:/3D/Data/Globe/Terrains/globe.arkpro");
-
-    // initFixedModelTree();
-    // initNaviPathTree();
-})
+//     // initFixedModelTree();
+//     // initNaviPathTree();
+// })
 
 window.onbeforeunload = function(event) {
     //return confirm("确定退出或刷新吗");

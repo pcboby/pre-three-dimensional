@@ -8,7 +8,7 @@ $(function() {
 
     var url = 'http://' + window.location.host + '/assets/Data/Terrains/ChongQing.arkpro'; // 有问题，无属性
 
-    // var url = 'E:/works/github/pre-three-dimensional/src/assets/Data/Terrains/ChongQing.arkpro'// OK;
+    // var url = 'E:/works/github/pre-three-dimensional/src/assets/Data/Terrains/ChongQing.arkpro' // OK;
 
 
 
