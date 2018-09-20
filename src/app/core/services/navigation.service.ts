@@ -46,60 +46,12 @@ export class NavigationService {
     title: '分析量算',
     icon: 'pIcon pIcon-004',
     data: [{
-      id: 'distanceCalculate',
-      title: '距离量算',
+      id: 'calculateTools',
+      title: '量算工具',
       icon: 'pIcon pIcon-003'
     }, {
-      id: 'areaCalculate',
-      title: '面积量算',
-      icon: 'pIcon pIcon-003'
-    }, {
-      id: 'heightCalculate',
-      title: '高度量算',
-      icon: 'pIcon pIcon-003'
-    }, {
-      id: 'terrainDistanceCalculate',
-      title: '地形距离量算',
-      icon: 'pIcon pIcon-003'
-    }, {
-      id: 'terrainAreaCalculate',
-      title: '地形面积量算',
-      icon: 'pIcon pIcon-003'
-    }, {
-      id: 'angleCalculate',
-      title: '角度量算',
-      icon: 'pIcon pIcon-003'
-    }, {
-      id: 'coordinateCalculate',
-      title: '坐标显示',
-      icon: 'pIcon pIcon-003'
-    }, {
-      id: 'sectionAnalyze',
-      title: '地形剖面分析',
-      icon: 'pIcon pIcon-003'
-    }, {
-      id: 'fillDigAnalyze',
-      title: '地形开挖分析',
-      icon: 'pIcon pIcon-003'
-    }, {
-      id: 'bufferAnalyze',
-      title: '缓冲区分析',
-      icon: 'pIcon pIcon-003'
-    }, {
-      id: 'waterAnalyze',
-      title: '画水分析',
-      icon: 'pIcon pIcon-003'
-    }, {
-      id: 'overlayAnalyze',
-      title: '空间叠加分析',
-      icon: 'pIcon pIcon-003'
-    }, {
-      id: 'slopeAnalyze',
-      title: '坡度分析',
-      icon: 'pIcon pIcon-003'
-    }, {
-      id: 'visualAnalyze',
-      title: '通视分析',
+      id: 'analyzeManagement',
+      title: '分析管理',
       icon: 'pIcon pIcon-003'
     }]
   }, {
