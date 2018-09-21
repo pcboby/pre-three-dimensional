@@ -202,11 +202,11 @@ function OnToolEvent_ElementDraw(strJson) {
         var labelDetail = getPlugin().ArkScene.CreateDetail(1);
 
         labelDetail.Text = "点标注";
-        labelDetail.TextHaloColor = 0;//(uint)System.Drawing.Color.FromArgb(0, 0, 255).ToArgb();
+        labelDetail.TextHaloColor = 0; //(uint)System.Drawing.Color.FromArgb(0, 0, 255).ToArgb();
         labelDetail.RelativeHeight = 30;
-        labelDetail.TextAlignment = 2;//arkATLLib.AlignmentCode.Alignment_Right = 2;
-        labelDetail.IconUrl = "F:/osgEarth-2.8-32-VS2015/data/placemark32.png";
-        labelDetail.IconAlignment = 1;//arkATLLib.AlignmentCode.Alignment_Left = 1;
+        labelDetail.TextAlignment = 2; //arkATLLib.AlignmentCode.Alignment_Right = 2;
+        labelDetail.IconUrl = "./images/placemark32.png";
+        labelDetail.IconAlignment = 1; //arkATLLib.AlignmentCode.Alignment_Left = 1;
 
         var coordArray = getPlugin().ArkScene.Json2Vec3Array(strJson);
         var coord = coordArray.ITEM(0);
@@ -215,9 +215,8 @@ function OnToolEvent_ElementDraw(strJson) {
 
         tempInstance.AddDetail(labelDetail);
         getPlugin().ArkScene.AddTempObject(tempInstance);
-    }
-    else if (msg.Finish === true && (msg.ToolName === "AddPolygonTool__" || msg.ToolName === "AddCircleTool__" ||
-    msg.ToolName === "AddRectTool__" || msg.ToolName === "AddEllipseTool__" || msg.ToolName === "AddSectorTool__")) {
+    } else if (msg.Finish === true && (msg.ToolName === "AddPolygonTool__" || msg.ToolName === "AddCircleTool__" ||
+            msg.ToolName === "AddRectTool__" || msg.ToolName === "AddEllipseTool__" || msg.ToolName === "AddSectorTool__")) {
         var tempInstance = getPlugin().ArkScene.CreateInstance("AreaTool_Inst");
         var featureDetail = getPlugin().ArkScene.CreateDetail(0);
 
@@ -225,8 +224,8 @@ function OnToolEvent_ElementDraw(strJson) {
         featureDetail.LineVisible = false;
         featureDetail.AreaVisible = true;
         //featureDetail.FillColor = 0;//(uint)System.Drawing.Color.FromArgb(192, 128, 128, 255).ToArgb();
-        featureDetail.ClampMode = 1;//arkATLLib.ClampModeCode.Clamp_To_Terrain=1;
-        featureDetail.ClampTechnique = 1;//arkATLLib.ClampTechniqueCode.Technique_Scene=1;
+        featureDetail.ClampMode = 1; //arkATLLib.ClampModeCode.Clamp_To_Terrain=1;
+        featureDetail.ClampTechnique = 1; //arkATLLib.ClampTechniqueCode.Technique_Scene=1;
 
         var coordArray = getPlugin().ArkScene.Json2Vec3Array(strJson);
         featureDetail.Coordinates = coordArray;
@@ -234,8 +233,7 @@ function OnToolEvent_ElementDraw(strJson) {
 
         tempInstance.AddDetail(featureDetail);
         getPlugin().ArkScene.AddTempObject(tempInstance);
-    }
-    else if (msg.Finish === true && (msg.ToolName === "AddPolylineTool__" || msg.ToolName === "AddArcTool__")) {
+    } else if (msg.Finish === true && (msg.ToolName === "AddPolylineTool__" || msg.ToolName === "AddArcTool__")) {
         var tempInstance = getPlugin().ArkScene.CreateInstance("LineTool_Inst");
         var featureDetail = getPlugin().ArkScene.CreateDetail(0);
 
@@ -243,8 +241,8 @@ function OnToolEvent_ElementDraw(strJson) {
         featureDetail.LineVisible = true;
         featureDetail.AreaVisible = false;
         //featureDetail.LineColor = 0;//(uint)System.Drawing.Color.FromArgb(192, 128, 255, 0).ToArgb();
-        featureDetail.ClampMode = 1;//arkATLLib.ClampModeCode.Clamp_To_Terrain=1;
-        featureDetail.ClampTechnique = 1;//arkATLLib.ClampTechniqueCode.Technique_Scene=1;
+        featureDetail.ClampMode = 1; //arkATLLib.ClampModeCode.Clamp_To_Terrain=1;
+        featureDetail.ClampTechnique = 1; //arkATLLib.ClampTechniqueCode.Technique_Scene=1;
 
         var coordArray = getPlugin().ArkScene.Json2Vec3Array(strJson);
         featureDetail.Coordinates = coordArray;
@@ -262,15 +260,13 @@ function OnToolEvent_Analysis(strJson) {
         var result = getPlugin().ArkScene.IntersectByGeoPoints(strJson);
         var msgInter = new ElemDrawToolMsg(result);
         //alert();//这里显示对话框
-    }
-    else if (msg.Finish === true && msg.ToolName === "AnalyFillDig_Tool__") {
+    } else if (msg.Finish === true && msg.ToolName === "AnalyFillDig_Tool__") {
         //arkATLLib.TerrainModifyTypeCode.Terrain_Hole=1
         var terrModify = getPlugin().ArkScene.TerrainModificationManager.CreateModification(1, "hole");
         terrModify.ModifyPolygon = strJson;
         terrModify.Apply = true;
-    }
-    else if (msg.Finish === true && msg.ToolName === "AnalyWater_Tool__") {
-        var clr = 0;//颜色uint clr = (uint)(Color.FromArgb(58, 58, 192).ToArgb());
+    } else if (msg.Finish === true && msg.ToolName === "AnalyWater_Tool__") {
+        var clr = 0; //颜色uint clr = (uint)(Color.FromArgb(58, 58, 192).ToArgb());
         if (toolManager.arkTreePane != null)
             toolManager.arkTreePane.AddWater("water", strJson, true, 900, 10, true, false, clr, "", 0.8, 1, 1, 100);
     }
@@ -280,8 +276,7 @@ function OnToolEvent_Query(strJson) {
     var msg = JSON.parse(strJson);
     if (msg.ToolName === "QueryVector_Tool__") {
         alert(strJson);
-    }
-    else if (msg.ToolName === "QueryModel_Tool__") {
+    } else if (msg.ToolName === "QueryModel_Tool__") {
         alert(strJson);
     }
 }

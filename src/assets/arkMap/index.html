@@ -23,6 +23,18 @@
             height: 100%;
         }
     </style>
+
+    <script type="text/javascript" FOR="ArkObj" EVENT="OnToolEvent(strJosn)">
+        OnToolEvent_ElementDraw(strJosn);
+        OnToolEvent_Analysis(strJosn);
+        OnToolEvent_Query(strJosn);
+    </script>
+
+    <script type="text/javascript" FOR="ArkObj" EVENT="OnDataLoadingEvent(status, info, progress)">
+        //alert(status);
+        //alert(info);
+        //alert(progress);
+    </script>
 </head>
 
 <body>
