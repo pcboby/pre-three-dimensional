@@ -10,8 +10,21 @@
     font-family: pcFont;
     font-weight: normal !important;
     font-style: normal !important;
+    /*一级*/
     &.pIcon-001::before {
         content: '1'
+    }
+    &.pIcon-002::before {
+        content: '3'
+    }
+    &.pIcon-003::before {
+        content: '4'
+    }
+    &.pIcon-004::before {
+        content: '2'
+    }
+    &.pIcon-005::before {
+        content: '5'
     }
     &.pIcon-001001::before {
         content: 'A'
@@ -22,62 +35,138 @@
     &.pIcon-001003::before {
         content: 'C'
     }
-    /**/
-    &.pIcon-002::before {
-        content: '2'
+    &.pIcon-001004::before {
+        content: 'D'
     }
+    /*二级*/
     &.pIcon-002001::before {
-        content: 'E'
+        content: 'J'
     }
     &.pIcon-002002::before {
-        content: 'F'
-    }
-    /**/
-    &.pIcon-003::before {
-        content: '3'
-    }
-    &.pIcon-003001::before {
-        content: 'H'
-    }
-    &.pIcon-003002::before {
-        content: 'I'
-    }
-    /**/
-    &.pIcon-004::before {
-        content: '4'
-    }
-    &.pIcon-004001::before {
         content: 'K'
     }
-    &.pIcon-004002::before {
-        content: 'L'
-    }
-    &.pIcon-004003::before {
-        content: 'M'
-    }
-    &.pIcon-004004::before {
-        content: 'N'
-    }
-    &.pIcon-004005::before {
-        content: 'O'
-    }
-    &.pIcon-004006::before {
+    &.pIcon-003001::before {
         content: 'P'
     }
-    &.pIcon-004007::before {
+    &.pIcon-003002::before {
         content: 'Q'
     }
-    &.pIcon-004008::before {
-        content: 'R'
+    &.pIcon-004001::before {
+        content: 'J'
     }
-    /**/
-    &.pIcon-005::before {
-        content: '5'
+    &.pIcon-004002::before {
+        content: 'K'
     }
     &.pIcon-005001::before {
-        content: 'T'
+        content: 'q'
     }
     &.pIcon-005002::before {
+        content: 'r'
+    }
+    /*三级*/
+    &.pIcon-000001::before {
+        content: 'F'
+    }
+    &.pIcon-000002::before {
+        content: 'G'
+    }
+    &.pIcon-000003::before {
+        content: 'H'
+    }
+    &.pIcon-000004::before {
+        content: 'M'
+    }
+    &.pIcon-000005::before {
+        content: 'N'
+    }
+    &.pIcon-000007::before {
+        content: 'S'
+    }
+    &.pIcon-000008::before {
+        content: 'T'
+    }
+    &.pIcon-000009::before {
         content: 'U'
+    }
+    &.pIcon-000010::before {
+        content: 'V'
+    }
+    &.pIcon-000011::before {
+        content: 'W'
+    }
+    &.pIcon-000012::before {
+        content: 'X'
+    }
+    &.pIcon-000013::before {
+        content: 'Y'
+    }
+    &.pIcon-000014::before {
+        content: 'Z'
+    }
+    &.pIcon-000015::before {
+        content: 'Z'
+    }
+    &.pIcon-000016::before {
+        content: '['
+    }
+    &.pIcon-000017::before {
+        content: '/005c'
+    }
+    &.pIcon-000018::before {
+        content: ']'
+    }
+    &.pIcon-000019::before {
+        content: '^'
+    }
+    &.pIcon-000020::before {
+        content: '_'
+    }
+    &.pIcon-000021::before {
+        content: '`'
+    }
+    &.pIcon-000022::before {
+        content: 'a'
+    }
+    &.pIcon-000023::before {
+        content: 'b'
+    }
+    &.pIcon-000024::before {
+        content: 'c'
+    }
+    &.pIcon-000025::before {
+        content: 'h'
+    }
+    &.pIcon-000026::before {
+        content: 'i'
+    }
+    &.pIcon-000027::before {
+        content: 'j'
+    }
+    &.pIcon-000028::before {
+        content: 'k'
+    }
+    &.pIcon-000029::before {
+        content: 'l'
+    }
+    &.pIcon-000030::before {
+        content: 'm'
+    }
+    &.pIcon-000031::before {
+        content: 'n'
+    }
+    &.pIcon-000032::before {
+        content: 'o'
+    }
+    &.pIcon-000033::before {
+        content: 't'
+    }
+    &.pIcon-000034::before {
+        content: 'u'
+    }
+    &.pIcon-000035::before {
+        content: 'v'
+    }
+    &.pIcon-000036::before {
+        content: 'w'
     }
 }
