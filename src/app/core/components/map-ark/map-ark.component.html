@@ -5,17 +5,20 @@
   <param name="_ExtentY" value="13229">
   <param name="_StockProps" value="0">
 </object> -->
-<ng-container *ngIf="isIE">
+<ng-container *ngIf="isIE && hasArk">
     <iframe src="/assets/arkMap/index.html" id="arkIframe" name="arkIframe" frameborder="0" width="100%" height="100%" style="position: absolute; z-index: -1;scrolling: no;"></iframe>
 </ng-container>
-<ng-container *ngIf="!isIE">
+<ng-container *ngIf="!isIE || !hasArk">
     <div class="error">
         <div>
             <p>
                 <nz-spin [nzSize]="'large'"></nz-spin>
             </p>
-            <p>
+            <p *ngIf="!isIE">
                 Sorry, The ArkMap must be use IE10+ ~
+            </p>
+            <p *ngIf="!hasArk">
+                Sorry, The ActiveX of ArkMap is not installed.
             </p>
         </div>
     </div>
