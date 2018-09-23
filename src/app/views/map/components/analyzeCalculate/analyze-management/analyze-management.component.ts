@@ -2,6 +2,8 @@ import {
   Component,
   OnInit
 } from '@angular/core';
+import untils from '../../../../../config/untils';
+import { MapperService } from '../../../../../core/services';
 
 @Component({
   selector: 'app-analyze-management',
@@ -10,19 +12,41 @@ import {
 })
 export class AnalyzeManagementComponent implements OnInit {
 
-  constructor() {}
+  constructor(private mapperService: MapperService) {}
 
   ngOnInit() {}
-  sectionAnalyze() {}
-  fillDigAnalyze() {}
+  sectionAnalyze() {
+    this.mapperService.closeRoam();
+    untils().ArkMap().AnalyzeSection();
 
-  pointBuffer() {}
-  lineBuffer() {}
-  areaBuffer() {}
+  }
+  fillDigAnalyze() {
+    this.mapperService.closeRoam();
+    untils().ArkMap().AnalyzeFillDig();
+  }
+
+  pointBuffer() {
+    this.mapperService.closeRoam();
+    untils().ArkMap().SA_PointBuffer();
+  }
+  lineBuffer() {
+    this.mapperService.closeRoam();
+    untils().ArkMap().SA_LineBuffer();
+  }
+  areaBuffer() {
+    this.mapperService.closeRoam();
+    untils().ArkMap().SA_AreaBuffer();
+  }
 
   waterAnalyze() {}
-  overlayAnalyze() {}
+  overlayAnalyze() {
+    this.mapperService.closeRoam();
+    untils().ArkMap().SA_IntersectionTool();
+  }
   slopeAnalyze() {}
-  visualAnalyze() {}
+  visualAnalyze() {
+    this.mapperService.closeRoam();
+    untils().ArkMap().AnalyzeSection();
+  }
 
 }

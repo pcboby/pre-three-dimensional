@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MapperService } from '../../../../../core/services';
 
 @Component({
   selector: 'app-flood-deduction',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FloodDeductionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mapperService: MapperService) { }
 
   ngOnInit() {
   }

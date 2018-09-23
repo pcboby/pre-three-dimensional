@@ -11,20 +11,12 @@ import untils from '../../../../../config/untils';
 })
 export class RenderModeComponent implements OnInit {
 
+  set randerMode(mode: number) {
+    untils().ArkMap().setRenderMode(mode);
+  }
+
   constructor() {}
 
   ngOnInit() {}
-  /**
-   * functions
-   */
-  pointRender() {
-    untils().ArkMap().RenderModePoint();
-  };
-  lineRender() {
-    untils().ArkMap().RenderModeLine();
-  };
-  polygonRender() {
-    untils().ArkMap().RenderModeFill();
-  };
 
 }

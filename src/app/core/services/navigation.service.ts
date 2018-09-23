@@ -36,11 +36,13 @@ export class NavigationService {
       id: 'clickQuery',
       title: '点击查询',
       icon: 'pIcon pIcon-002001'
-    }, {
-      id: 'attributeQuery',
-      title: '属性查询',
-      icon: 'pIcon pIcon-002002'
-    }]
+    }
+    // , {
+    //   id: 'attributeQuery',
+    //   title: '属性查询',
+    //   icon: 'pIcon pIcon-002002'
+    // }
+  ]
   }, {
     id: 'analyzeCalculate',
     title: '分析量算',

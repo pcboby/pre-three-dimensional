@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NzFormatEmitEvent, NzTreeNode } from 'ng-zorro-antd';
+import untils from '../../../../../config/untils';
 
 @Component({
   selector: 'app-model-management',
@@ -7,9 +9,62 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModelManagementComponent implements OnInit {
 
-  constructor() { }
+  // expandKeys = ['1001', '10001'];
+  checkedKeys = [];
+  // selectedKeys = ['10001', '100011'];
+  expandDefault = false;
+  nodes = [];
 
-  ngOnInit() {
+  mouseAction(name: string, event: NzFormatEmitEvent): void {
+    console.log(name, event);
+    if(name =="dblclick")
+    {
+      if(event.node.children.length==0)//只对叶节点响应
+        untils().ArkMap().fixedModelTreeOnDblClick(event.node.key );
+    }
   }
+  checkAction(event: NzFormatEmitEvent): void {//check响应
+
+    this.loopCheckAndResponse(event.node)
+
+  }
+  loopCheckAndResponse(mynode: NzTreeNode): void {
+    console.log(mynode);
+
+    if(mynode.children.length>0)
+    {
+      for(var i=0; i<mynode.children.length; i++)
+      {
+        this.loopCheckAndResponse(mynode.children[i])
+        // alert(mynode.children[i].isChecked)
+      }
+
+    }
+    else{
+      console.log(mynode.isChecked,mynode.key)
+      this.checkRespose(mynode.key,mynode.isChecked)
+
+    }
+  }
+
+  checkRespose(nodeID:string, isChecked: boolean): void {
+    // return;
+    untils().ArkMap().fixedModelTreeOnCheck( isChecked, nodeID );
+  }
+
+  constructor() {
+    var originalFixedModelNodes = untils().ArkMap().getFixedModelTreeData();
+    console.log(this.nodes)
+    for(var i=0; i<originalFixedModelNodes.length; i++)
+    {
+      this.nodes = [new NzTreeNode(originalFixedModelNodes[0].nodes[0])];
+      this.checkedKeys = originalFixedModelNodes[0].checkedKeys;
+ // alert("初始化倾斜数据")
+
+    }
+    // console.log("orignal",originalFixedModelNodes)
+  }
+
+  ngOnInit() {}
 
 }

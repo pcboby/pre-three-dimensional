@@ -2,9 +2,30 @@
     <div class="panel-body panel-body-space">
         <!-- 内容 star -->
         <nz-divider nzText="矢量查询" nzOrientation="left"></nz-divider>
-        <button nz-button nzType="default" nzBlock (click)="queryVector()">矢量查询</button>
+        <button nz-button nzType="primary" nzBlock (click)="queryVector()" [disabled]="!!queryMode" [hidden]="queryMode === 'vector'">矢量查询</button>
+        <button nz-button nzType="primary" nzBlock (click)="queryVectorClose()" *ngIf="queryMode === 'vector'">关闭矢量查询</button>
         <nz-divider nzText="模型查询" nzOrientation="left"></nz-divider>
-        <button nz-button nzType="default" nzBlock (click)="queryFixedModel()">模型查询</button>
+        <button nz-button nzType="primary" nzBlock (click)="queryFixedModel()" [disabled]="!!queryMode" [hidden]="queryMode === 'fixed'">模型查询</button>
+        <button nz-button nzType="primary" nzBlock (click)="queryFixedModelClose()" *ngIf="queryMode === 'fixed'">关闭模型查询</button>
+
+        <nz-divider nzText="查询结果" nzOrientation="left"></nz-divider>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>参数</th>
+                    <th>类型</th>
+                    <th>值</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!---->
+                <tr *ngFor="let item of items">
+                    <td>{{item.key}}</td>
+                    <td>{{item.type}}</td>
+                    <td>{{item.value}}</td>
+                </tr>
+            </tbody>
+        </table>
         <!-- 内容 end -->
     </div>
 </div>

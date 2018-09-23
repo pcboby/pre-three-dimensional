@@ -1,7 +1,8 @@
 import {
   Component,
   OnInit,
-  ElementRef
+  ElementRef,
+  OnDestroy
 } from '@angular/core';
 
 import * as _ from 'lodash';
@@ -13,7 +14,7 @@ import { environment } from '../../../../environments/environment';
   templateUrl: './map-ark.component.html',
   styleUrls: ['./map-ark.component.css']
 })
-export class MapArkComponent implements OnInit {
+export class MapArkComponent implements OnInit, OnDestroy {
 
   isDev = !environment.production;
 
@@ -23,4 +24,7 @@ export class MapArkComponent implements OnInit {
     return untils().IE() > 10;
   }
   ngOnInit() {}
+  ngOnDestroy() {
+    untils().ArkMap().UnInitialize();
+  }
 }

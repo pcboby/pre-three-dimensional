@@ -10,34 +10,35 @@ import untils from '../../../../../config/untils';
   styleUrls: ['./label-pan.component.css']
 })
 export class LabelPanComponent implements OnInit {
+  pointLabelText = '点标注';
 
   constructor() {}
 
   ngOnInit() {}
   pointLabel() {
-    untils().ArkMap().DrawPoint();
-  };
+    untils().ArkMap().DrawPoint(this.pointLabelText);
+  }
   polylineLabel() {
     untils().ArkMap().DrawPolyline();
-  };
+  }
   polygonLabel() {
     untils().ArkMap().DrawPolygon();
-  };
+  }
   rectangleLabel() {
     untils().ArkMap().DrawRect();
-  };
+  }
   circleLabel() {
     untils().ArkMap().DrawCircle();
-  };
+  }
   ellipseLabel() {
     untils().ArkMap().DrawEllipse();
-  };
+  }
   arcLabel() {
     untils().ArkMap().DrawArc();
-  };
+  }
   sectorLabel() {
     untils().ArkMap().DrawSector();
-  };
+  }
 
 
 }

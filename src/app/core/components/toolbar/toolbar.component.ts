@@ -44,12 +44,19 @@ export class ToolbarComponent implements OnInit {
     return this.layoutService.showToolbarLabel;
   }
 
+  get isRoam() {
+    return this.mapperService.isRoam;
+  }
+  set isRoam(b: boolean) {
+    // untils().ArkMap().setRoam();//设置漫游
+    this.mapperService.isRoam = b;
+  }
 
   toggle(key: string) {
     this.navigationService.select_tool = this.selectTool === key ? null : key;
-  };
+  }
 
   clear() {
     untils().ArkMap().ClearAll();
-  };
+  }
 }

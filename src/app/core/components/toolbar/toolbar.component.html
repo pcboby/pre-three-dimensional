@@ -11,6 +11,12 @@
 <div class="space"></div>
 <div class="tools tools-orange">
     <ul>
+        <li (click)="isRoam = true" nzTitle="漫游" nzPlacement="right" nz-tooltip [ngClass]="{'active':isRoam}">
+            <a>
+                <i class="fa fa-google-plus"></i>
+                <span [hidden]="!showToolbarLabel">漫游</span>
+            </a>
+        </li>
         <li (click)="clear()" nzTitle="清除" nzPlacement="right" nz-tooltip>
             <a>
                 <i class="fa fa-trash"></i>
@@ -18,8 +24,10 @@
             </a>
         </li>
     </ul>
+</div>
+<div class="tools tools-blue">
     <ul>
-        <li *ngFor="let mode of mapModes" (click)="mapMode = mode.code" [ngClass]="{'active':mapMode === mode.code}" [nzTitle]="mode.title" nzPlacement="right" nz-tooltip>
+        <li *ngFor="let mode of mapModes" (click)="mapMode = mode.code; select_tool = null;" [ngClass]="{'active':mapMode === mode.code}" [nzTitle]="mode.title" nzPlacement="right" nz-tooltip>
             <a>
                 <i class="{{mode.icon}}"></i>
                 <span [hidden]="!showToolbarLabel">{{mode.title}}</span>

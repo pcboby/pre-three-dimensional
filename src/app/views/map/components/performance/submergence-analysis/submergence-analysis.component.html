@@ -1,14 +1,22 @@
 <div class="panel" style="height:100%;">
     <div class="panel-body panel-body-space">
         <!-- 内容 star -->
-        <nz-divider nzText="淹没分析加载" nzOrientation="left"></nz-divider>
-        <button nz-button nzType="default" nzBlock>淹没分析加载</button>
-        <nz-divider nzText="淹没分析Step" nzOrientation="left"></nz-divider>
-        <button nz-button nzType="default" nzBlock>淹没分析Step</button>
-        <nz-divider nzText="淹没分析重置" nzOrientation="left"></nz-divider>
-        <button nz-button nzType="default" nzBlock>淹没分析重置</button>
-        <nz-divider nzText="淹没分析清除" nzOrientation="left"></nz-divider>
-        <button nz-button nzType="default" nzBlock>淹没分析清除</button>
+        <nz-divider nzText="进度" nzOrientation="left"></nz-divider>
+        <nz-progress [nzPercent]="percent" nzStatus="active"></nz-progress>
+
+        <nz-divider nzText="操作" nzOrientation="left"></nz-divider>
+
+        <nz-button-group>
+            <button nz-button nzType="primary" (click)="play()" [disabled]="viewMode === 'play'">
+            <i class="anticon anticon-play-circle"></i>播放
+          </button>
+            <button nz-button nzType="primary" (click)="pause()" [disabled]="!(viewMode === 'play')">
+            <i class="anticon anticon-pause-circle"></i>暂停
+          </button>
+            <button nz-button nzType="primary" (click)="stop()" [disabled]="!(viewMode === 'play' || viewMode == 'pause')">
+            <i class="anticon anticon-close-circle"></i>停止
+          </button>
+        </nz-button-group>
         <!-- 内容 end -->
     </div>
 </div>

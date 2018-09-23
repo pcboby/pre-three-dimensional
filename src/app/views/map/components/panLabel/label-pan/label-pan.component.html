@@ -2,21 +2,33 @@
     <div class="panel-body panel-body-space">
         <!-- 内容 star -->
         <nz-divider nzText="点标注" nzOrientation="left"></nz-divider>
-        <button nz-button nzType="default" nzBlock (click)="pointLabel()">点标注</button>
+        <form nz-form>
+            <nz-form-item>
+                <nz-form-label [nzSm]="8" [nzXs]="24" nzFor="pointLabelText">标注</nz-form-label>
+                <nz-form-control [nzSm]="16" [nzXs]="24">
+                    <input type="text" nz-input [(ngModel)]="pointLabelText" name="pointLabelText" id="pointLabelText" placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-control>
+                    <button nz-button nzBlock nzType="primary" (click)="pointLabel()">点标注</button>
+                </nz-form-control>
+            </nz-form-item>
+        </form>
         <nz-divider nzText="线标注" nzOrientation="left"></nz-divider>
-        <button nz-button nzType="default" nzBlock (click)="polylineLabel()">线标注</button>
+        <button nz-button nzType="primary" nzBlock (click)="polylineLabel()">线标注</button>
         <nz-divider nzText="面标注" nzOrientation="left"></nz-divider>
-        <button nz-button nzType="default" nzBlock (click)="polygonLabel()">面标注</button>
+        <button nz-button nzType="primary" nzBlock (click)="polygonLabel()">面标注</button>
         <nz-divider nzText="矩形标注" nzOrientation="left"></nz-divider>
-        <button nz-button nzType="default" nzBlock (click)="rectangleLabel()">矩形标注</button>
+        <button nz-button nzType="primary" nzBlock (click)="rectangleLabel()">矩形标注</button>
         <nz-divider nzText="圆形标注" nzOrientation="left"></nz-divider>
-        <button nz-button nzType="default" nzBlock (click)="circleLabel()">圆形标注</button>
+        <button nz-button nzType="primary" nzBlock (click)="circleLabel()">圆形标注</button>
         <nz-divider nzText="椭圆标注" nzOrientation="left"></nz-divider>
-        <button nz-button nzType="default" nzBlock (click)="ellipseLabel()">椭圆标注</button>
+        <button nz-button nzType="primary" nzBlock (click)="ellipseLabel()">椭圆标注</button>
         <nz-divider nzText="弧线标注" nzOrientation="left"></nz-divider>
-        <button nz-button nzType="default" nzBlock (click)="arcLabel()">弧线标注</button>
+        <button nz-button nzType="primary" nzBlock (click)="arcLabel()">弧线标注</button>
         <nz-divider nzText="扇形标注" nzOrientation="left"></nz-divider>
-        <button nz-button nzType="default" nzBlock (click)="sectorLabel()">扇形标注</button>
+        <button nz-button nzType="primary" nzBlock (click)="sectorLabel()">扇形标注</button>
         <!-- 内容 end -->
         <div class="space"></div>
     </div>

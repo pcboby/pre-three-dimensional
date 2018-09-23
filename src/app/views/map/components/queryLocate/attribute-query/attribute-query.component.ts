@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MapperService } from '../../../../../core/services';
 
 @Component({
   selector: 'app-attribute-query',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AttributeQueryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mapperService: MapperService) { }
 
   ngOnInit() {
   }
