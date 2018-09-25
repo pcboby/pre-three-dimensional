@@ -36,7 +36,12 @@ export class MapArkComponent implements OnInit, OnDestroy {
     check();
   }
   ngOnDestroy() {
-    untils().ArkMap().UnInitialize();
+    try {
+      untils().ArkMap().UnInitialize();
+
+    } catch (error) {
+
+    }
   }
 }
 

@@ -1,0 +1,16 @@
+<ng-container [ngSwitch]="controlId">
+    <!-- 001 -->
+    <!-- <ng-container *ngSwitchCase="001001">
+        aaaa
+    </ng-container> -->
+
+
+    <!-- error -->
+    <ng-container *ngSwitchCase="'undefined'">
+        Error
+    </ng-container>
+    <!-- noFined -->
+    <ng-container *ngSwitchDefault>
+        {{controlId}}
+    </ng-container>
+</ng-container>
