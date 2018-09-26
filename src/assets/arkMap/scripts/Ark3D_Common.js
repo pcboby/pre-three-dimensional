@@ -1,4 +1,6 @@
 ﻿// 视图
+window._OnToolEvent_Query_value = {};
+
 function RenderModePoint() {
     getPlugin().ArkScene.RenderMode = 0;
 }
@@ -143,7 +145,11 @@ function SA_AreaBuffer() {
     getPlugin().ArkScene.ToolManager.ActiveTool = "AreaBufferTool";
 }
 
-
+function AnalyzeVisible() {
+    //通视分析
+    alert("VisualLineTool")
+    getPlugin().ArkScene.ToolManager.ActiveTool = "VisualLineTool"
+}
 // 部分功能工具
 function AnalyzeSection() {
     //断面分析AnalyzeSection()arkATLLib.ToolTypeCode.Polyline_Tool=2
@@ -194,6 +200,19 @@ function QueryFixedModel() {
 }
 
 
+function setNavState(bl) { //获取导航状态
+    if (bl) {
+        getPlugin().ArkScene.ToolManager.DeactiveTool();
+    }
+
+}
+
+var labelDetailText = "点标注";
+
+function setLabelDetailText(strLabel) { //设置点标注输入文本
+    labelDetailText = strLabel;
+}
+
 // 工具消息响应
 function OnToolEvent_ElementDraw(strJson) {
     var msg = JSON.parse(strJson);
@@ -201,7 +220,7 @@ function OnToolEvent_ElementDraw(strJson) {
         var tempInstance = getPlugin().ArkScene.CreateInstance("PtTool_Inst");
         var labelDetail = getPlugin().ArkScene.CreateDetail(1);
 
-        labelDetail.Text = "点标注";
+        labelDetail.Text = labelDetailText;
         labelDetail.TextHaloColor = 0; //(uint)System.Drawing.Color.FromArgb(0, 0, 255).ToArgb();
         labelDetail.RelativeHeight = 30;
         labelDetail.TextAlignment = 2; //arkATLLib.AlignmentCode.Alignment_Right = 2;
@@ -269,14 +288,17 @@ function OnToolEvent_Analysis(strJson) {
         var clr = 0; //颜色uint clr = (uint)(Color.FromArgb(58, 58, 192).ToArgb());
         if (toolManager.arkTreePane != null)
             toolManager.arkTreePane.AddWater("water", strJson, true, 900, 10, true, false, clr, "", 0.8, 1, 1, 100);
+    } else if (msg.ToolName === "VisualLineTool") {
+        var coordArray = getPlugin().ArkScene.Json2Vec3Array(strJson);
+        var re = getPlugin().ArkScene.IntersectByLine(coordArray.ITEM(0), coordArray.ITEM(1), 1, 0);
+        // alert(re)
+        console.log(re)
     }
 }
 
 function OnToolEvent_Query(strJson) {
     var msg = JSON.parse(strJson);
-    if (msg.ToolName === "QueryVector_Tool__") {
-        alert(strJson);
-    } else if (msg.ToolName === "QueryModel_Tool__") {
-        alert(strJson);
-    }
+    // console.log('$$$propertyJson:', msg);
+    window._OnToolEvent_Query_value = msg;
+    return msg;
 }

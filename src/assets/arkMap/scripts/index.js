@@ -4,6 +4,7 @@ $(function() {
 
 function Initialize() {
     getPlugin().Initialize(getUrl());
+    // alert("初始化")
 }
 
 function UnInitialize() {
@@ -11,8 +12,10 @@ function UnInitialize() {
 }
 
 function getServices() {
-    // var url = 'E:/works/github/pre-three-dimensional/src/assets/Data'
-    var url = 'http://' + window.location.host + '/assets/Data';
+    //var url = 'Y:/Project/重庆防汛管理信息化/Data'
+    //  var url = 'http://localhost:8092/Data'
+    // var url = 'http://' + window.location.host + '/assets/Data';
+    var url = 'http://10.6.172.177:9001/services/data'
     return url;
 }
 

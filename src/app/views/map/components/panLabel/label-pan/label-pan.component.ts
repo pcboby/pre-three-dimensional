@@ -16,29 +16,32 @@ export class LabelPanComponent implements OnInit {
 
   ngOnInit() {}
   pointLabel() {
-    untils().ArkMap().DrawPoint(this.pointLabelText);
+    // untils().ArkMap().setLabelDetailText('标注点');
+    untils().ArkMap().setLabelDetailText(this.pointLabelText);
+    untils().ArkMap().DrawPoint();
   }
-  polylineLabel() {
-    untils().ArkMap().DrawPolyline();
-  }
-  polygonLabel() {
-    untils().ArkMap().DrawPolygon();
-  }
-  rectangleLabel() {
-    untils().ArkMap().DrawRect();
-  }
-  circleLabel() {
-    untils().ArkMap().DrawCircle();
-  }
-  ellipseLabel() {
-    untils().ArkMap().DrawEllipse();
-  }
-  arcLabel() {
-    untils().ArkMap().DrawArc();
-  }
-  sectorLabel() {
-    untils().ArkMap().DrawSector();
-  }
+
+polylineLabel() {
+  untils().ArkMap().DrawPolyline();
+}
+polygonLabel() {
+  untils().ArkMap().DrawPolygon();
+}
+rectangleLabel() {
+  untils().ArkMap().DrawRect();
+}
+circleLabel() {
+  untils().ArkMap().DrawCircle();
+}
+ellipseLabel() {
+  untils().ArkMap().DrawEllipse();
+}
+arcLabel() {
+  untils().ArkMap().DrawArc();
+}
+sectorLabel() {
+  untils().ArkMap().DrawSector();
+}
 
 
 }

@@ -4,8 +4,9 @@ function vectorTreeOnCheck(ischecked, treeId) {
     //响应，传入树控件的叶节点check状态，对应id。id是唯一的，在初始化时传入
     //只接收叶节点id，check中父节点，请先遍历父节点，再调用传入其子节点的id
     vectorManager = getPlugin().VectorManager;
-    vectorManager.Visible(treeId) = ischecked;
-
+    vectorManager.Visible(treeId) = ischecked; 
+    // console.log("矢量可视化",treeId);
+    // console.log("矢量可视化",ischecked);
 }
 
 function vectorTreeOnDblClick( treeId) {
@@ -50,16 +51,20 @@ function getVectorTreeData() {
                 });
             }
         }
-        var vecTreeNode = [];
-        vecTreeNode.push({
-            title: '矢量数据',
-            key: '001',
-            children:zNodes
-        })
-        var treeSetNodes = [];
-        treeSetNodes.push({
-            checkedKeys: checkedKeys,
-            nodes: vecTreeNode
-        })
-        return treeSetNodes;
+        // var vecTreeNode = [];
+        // vecTreeNode.push({
+        //     title: '矢量数据',
+        //     key: '001',
+        //     children:zNodes
+        // })
+        // var treeSetNodes = [];
+        // treeSetNodes.push({
+        //     checkedKeys: checkedKeys,
+        //     nodes: vecTreeNode
+        // })    
+        return {
+        title: '矢量数据',
+        key: '001',
+        children: zNodes
+    }
 }

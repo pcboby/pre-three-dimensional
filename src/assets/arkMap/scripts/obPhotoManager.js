@@ -49,16 +49,22 @@ function getObPhotoTreeData() {
                 });
             }
         }
-        var vecTreeNode = [];
-        vecTreeNode.push({
+        // var vecTreeNode = [];
+        // vecTreeNode.push({
+        //     title: '倾斜数据',
+        //     key: '001',
+        //     children:zNodes
+        // })
+        // var treeSetNodes = [];
+        // treeSetNodes.push({
+        //     checkedKeys: checkedKeys,
+        //     nodes: vecTreeNode
+        // })
+        // return treeSetNodes;
+        
+        return {
             title: '倾斜数据',
             key: '001',
-            children:zNodes
-        })
-        var treeSetNodes = [];
-        treeSetNodes.push({
-            checkedKeys: checkedKeys,
-            nodes: vecTreeNode
-        })
-        return treeSetNodes;
+            children: zNodes
+        }
 }

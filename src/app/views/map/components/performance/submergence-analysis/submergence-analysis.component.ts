@@ -4,7 +4,6 @@ import {
   OnDestroy
 } from '@angular/core';
 import untils from '../../../../../config/untils';
-import { MapperService } from '../../../../../core/services';
 
 @Component({
   selector: 'app-submergence-analysis',
@@ -17,11 +16,17 @@ export class SubmergenceAnalysisComponent implements OnInit, OnDestroy {
   public percent = 50;
   // untils().ArkMap().FloodProc_StepIt()
 
-  constructor(private mapperService: MapperService) {}
+  constructor() {}
 
   ngOnInit() {}
   ngOnDestroy() {
-    untils().ArkMap().FloodProc_Close();
+    console.log('submergence-analysis exit~~~');
+    try {
+      untils().ArkMap().FloodProc_Close();
+
+    } catch (error) {
+
+    }
   }
 
 

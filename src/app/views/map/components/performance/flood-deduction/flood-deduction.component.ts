@@ -1,5 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { MapperService } from '../../../../../core/services';
+import {
+  Component,
+  OnInit,
+  OnDestroy
+} from '@angular/core';
 import untils from '../../../../../config/untils';
 
 @Component({
@@ -9,35 +12,40 @@ import untils from '../../../../../config/untils';
 })
 export class FloodDeductionComponent implements OnInit, OnDestroy {
 
+
   public viewMode = '';
   public percent = 50;
-  // untils().ArkMap().FloodProc_StepIt()
 
-  constructor(private mapperService: MapperService) {}
+  constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    untils().ArkMap().River();
+  }
   ngOnDestroy() {
-    untils().ArkMap().FloodProc_Close();
+    try {
+      untils().ArkMap().stopPlay();
+    } catch (error) {}
   }
 
 
   play() {
     this.viewMode = 'play';
-    untils().ArkMap().FloodProc_Init();
+    untils().ArkMap().continuePlay();
     console.log('初始化完成');
   }
   pause() {
     this.viewMode = 'pause';
-    untils().ArkMap().FloodProc_Pause();
+    untils().ArkMap().PausePlay();
   }
   continue () {
     this.viewMode = 'play';
-    untils().ArkMap().FloodProc_ContinuePlay();
+    untils().ArkMap().continuePlay();
   }
   stop() {
     this.viewMode = 'stop';
-    untils().ArkMap().FloodProc_stop();
+    untils().ArkMap().stopPlay();
   }
+
 
 
 }

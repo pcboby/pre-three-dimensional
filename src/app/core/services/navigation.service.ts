@@ -53,7 +53,7 @@ export class NavigationService {
       icon: 'pIcon pIcon-003001'
     }, {
       id: 'analyzeManagement',
-      title: '分析管理',
+      title: '分析工具',
       icon: 'pIcon pIcon-003002'
     }]
   }, {

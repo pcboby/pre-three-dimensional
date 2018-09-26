@@ -30,10 +30,6 @@ const routes: Routes = [
     loadChildren: './views/map/map.module#MapModule'
   },
   {
-    path: 'lanzhou',
-    loadChildren: './views/lanzhou/lanzhou.module#LanzhouModule'
-  },
-  {
     path: '**', // 路由判定
     redirectTo: 'error',
     pathMatch: 'full'

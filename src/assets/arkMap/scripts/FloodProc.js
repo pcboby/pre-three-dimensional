@@ -1,13 +1,14 @@
 
 
-function FloodProc_Init() {//初始播放
-    var ipConfigStr = 'http://' + window.location.host + '/assets/Data';
-    getPlugin().FloodProc.Initialize(ipConfigStr+"/Flood/重庆潼南合川.shp");
+function FloodProc_Init() {//初始播放    
+    // alert("播放")
+    var ipConfigStr = getServices() ;//'http://' + window.location.host + '/assets/Data'
+    getPlugin().FloodProc.Initialize(ipConfigStr+"/Flood/ChongqingTongnan.shp");
     getPlugin().FloodProc.ColorFile = ipConfigStr+"/Flood/color.txt";
     getPlugin().FloodProc.CurStep = 10;
 
     window.FloodProcInterval = window.setInterval("FloodProc_StepIt()",2000);
-    alert("完成")
+    // alert("完成")
 }
 
 function FloodProc_Pause(){//暂停    

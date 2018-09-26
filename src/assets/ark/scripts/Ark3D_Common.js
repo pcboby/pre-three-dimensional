@@ -308,9 +308,9 @@ function OnToolEvent_Analysis(strJson) {
 function OnToolEvent_Query(strJson) {
     var msg = JSON.parse(strJson);
     if (msg.ToolName === "QueryVector_Tool__") {
-        alert(strJson);
+        // alert(strJson);
     }
     else if (msg.ToolName === "QueryModel_Tool__") {
-        alert(strJson);
+        // alert(strJson);
     }
 }

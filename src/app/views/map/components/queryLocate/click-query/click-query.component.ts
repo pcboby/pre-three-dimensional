@@ -1,9 +1,12 @@
 import {
   Component,
-  OnInit
+  OnInit,
+  ChangeDetectorRef
 } from '@angular/core';
 import untils from '../../../../../config/untils';
-import { MapperService } from '../../../../../core/services';
+import {
+  MapperService
+} from '../../../../../core/services';
 
 @Component({
   selector: 'app-click-query',
@@ -13,23 +16,41 @@ import { MapperService } from '../../../../../core/services';
 export class ClickQueryComponent implements OnInit {
 
   queryMode = '';
-  items = [{
-    key: 'keyname',
-    type: 'keytype',
-    value: 'keyvalue'
-  }, {
-    key: 'keyname1',
-    type: 'keytype1',
-    value: 'keyvalue1'
-  }, {
-    key: 'keyname2',
-    type: 'keytype2',
-    value: 'keyvalue2'
-  }];
 
-  constructor(private mapperService: MapperService) {}
+  // get data_name() {
+  //   return untils().ArkMap()['_OnToolEvent_Query_value'].name;
+  // }
+  // get data_class() {
+  //   return untils().ArkMap()['_OnToolEvent_Query_value'].class;
+  // }
+  // get data_ToolName() {
+  //   return untils().ArkMap()['_OnToolEvent_Query_value'].ToolName;
+  // }
+  gridData = {
+    name: '',
+    class: '',
+    ToolName: ''
+  };
 
-  ngOnInit() {}
+
+  constructor(private mapperService: MapperService, private cdr: ChangeDetectorRef) {}
+
+  ngOnInit() {
+    this.getGridData();
+  }
+
+  getGridData() {
+    setTimeout(() => {
+      const d = untils().ArkMap()['_OnToolEvent_Query_value'] || {};
+      this.gridData = {
+        name: d.name,
+        class: d.class,
+        ToolName: d.ToolName
+      };
+      this.getGridData();
+    }, 350);
+  }
+
   queryVector() {
     this.mapperService.closeRoam();
     this.queryMode = 'vector';

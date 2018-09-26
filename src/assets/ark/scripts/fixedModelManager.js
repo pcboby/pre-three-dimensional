@@ -24,6 +24,7 @@ function getFixedModelTreeData() {
          for (var i = 0; i < allTypes.length; i++) {
              var parentNodeName = allTypes[i];
              var typeNodes = JSON.parse(fixedModelManager.TypeNodes(parentNodeName));
+             console.log(typeNodes.ID);
              if(typeNodes.ID.length>0)
              {
                  fixedModelTreeNodes.push(typeNodes);

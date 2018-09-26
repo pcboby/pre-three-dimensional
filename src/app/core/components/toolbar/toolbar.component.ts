@@ -50,6 +50,7 @@ export class ToolbarComponent implements OnInit {
   set isRoam(b: boolean) {
     // untils().ArkMap().setRoam();//设置漫游
     this.mapperService.isRoam = b;
+    untils().ArkMap().setNavState(b);
   }
 
   toggle(key: string) {

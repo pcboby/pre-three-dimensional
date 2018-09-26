@@ -9,7 +9,7 @@ function getPlugin() {
 
 $(function() {
     // getPlugin().Initialize(servicesPath + "Terrains/ChongQing.arkpro");
-    alert("初始化")
+    // alert("初始化")
     // getPlugin().Initialize("Y:/Project/重庆防汛管理信息化/Data/Terrains/ChongQing.arkpro");
 
     getPlugin().Initialize("http://localhost:8092/Data/Terrains/ChongQing.arkpro");

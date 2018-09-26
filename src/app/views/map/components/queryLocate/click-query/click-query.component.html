@@ -12,17 +12,23 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>参数</th>
-                    <th>类型</th>
-                    <th>值</th>
+                    <th>key</th>
+                    <th>value</th>
                 </tr>
             </thead>
             <tbody>
                 <!---->
-                <tr *ngFor="let item of items">
-                    <td>{{item.key}}</td>
-                    <td>{{item.type}}</td>
-                    <td>{{item.value}}</td>
+                <tr>
+                    <td>class</td>
+                    <td>{{gridData.class}}</td>
+                </tr>
+                <tr>
+                    <td>name</td>
+                    <td>{{gridData.name}}</td>
+                </tr>
+                <tr>
+                    <td>ToolName</td>
+                    <td>{{gridData.ToolName}}</td>
                 </tr>
             </tbody>
         </table>

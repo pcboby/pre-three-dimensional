@@ -1,16 +1,30 @@
 <div class="panel" style="height:100%;">
-    <div class="panel-body panel-body-space">
+    <div class="panel-body">
         <!-- 内容 star -->
-        <!-- <div class="listGroup">
+        <div class="listGroup">
             <ul>
                 <li *ngFor="let d of data">
                     <div class="listGroup-item">
-                        <label nz-checkbox [(ngModel)]="d.checked">{{d.title}}</label>
+                        <label><input type="radio" [(ngModel)]="d.checked" [value]="d.id"  (change)= "checkAction(d.id)">{{d.title}}</label>
                     </div>
                 </li>
             </ul>
-        </div> -->
-        <nz-divider nzText="分隔线" nzOrientation="left"></nz-divider>
+        </div>
         <!-- 内容 end -->
+    </div>
+    <div class="panel-foot">
+        <!-- 按钮 star-->
+        <nz-button-group>
+           <button nz-button (click)="play()" [disabled]="viewMode === 'play'">
+              <i class="anticon anticon-play-circle"></i>播放
+            </button>
+            <button nz-button (click)="pause()" [disabled]="!(viewMode === 'play')">
+                   <i class="anticon anticon-pause-circle"></i>暂停
+            </button>
+            <button nz-button (click)="stop()" [disabled]="!(viewMode === 'play' || viewMode == 'pause')">
+                <i class="anticon anticon-close-circle"></i>停止
+            </button>
+        </nz-button-group>
+        <!-- 按钮 end -->
     </div>
 </div>
