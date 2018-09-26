@@ -8,7 +8,10 @@ import { NavigationService, LayoutService } from '../../core/services';
 })
 export class LanzhouComponent implements OnInit {
 
-  constructor(private navigationService: NavigationService, private layoutService: LayoutService) {}
+  constructor(private navigationService: NavigationService, private layoutService: LayoutService) {
+    this.navigationService.projectCode = 'lanzhou';
+    this.navigationService.select_nav = 'layer';
+  }
 
   ngOnInit() {}
 

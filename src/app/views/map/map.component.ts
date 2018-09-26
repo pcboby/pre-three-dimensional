@@ -14,7 +14,9 @@ import { LayoutService } from '../../core/services';
 })
 export class MapComponent implements OnInit {
 
-  constructor(private navigationService: NavigationService, private layoutService: LayoutService) {}
+  constructor(private navigationService: NavigationService, private layoutService: LayoutService) {
+    this.navigationService.projectCode = 'chongqing';
+  }
 
   ngOnInit() {}
 
