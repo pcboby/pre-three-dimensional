@@ -5,6 +5,9 @@
     &.panel-border {
         border: 1px solid #ddd;
     }
+    >.panel-sild {
+        padding: 8px;
+    }
     >.panel-head {
         border-bottom: 1px solid #ddd;
         display: flex;

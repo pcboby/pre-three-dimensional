@@ -1,3 +1,67 @@
-<p>
-  location-coordinate works!
-</p>
+<div class="panel" style="height:100%;">
+    <div class="panel-body panel-body-space">
+        <!-- 内容 star -->
+
+        <form nz-form>
+
+            <nz-divider nzText="经纬度高程坐标" nzOrientation="left"></nz-divider>
+
+            <nz-form-item>
+                <nz-form-label [nzSm]="4" [nzXs]="20">B</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="4" [nzXs]="20">L</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="4" [nzXs]="20">H</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input [(ngModel)]="pointLabelText" placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+
+
+            <nz-divider nzText="地方坐标" nzOrientation="left"></nz-divider>
+
+            <nz-form-item>
+                <nz-form-label [nzSm]="4" [nzXs]="20">X</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="4" [nzXs]="20">Y</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="4" [nzXs]="20">H</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input [(ngModel)]="pointLabelText" placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+
+        </form>
+
+        <!-- 内容 end -->
+    </div>
+    <div class="panel-foot" style="text-align:center;">
+
+        <!-- 按钮 star-->
+        <nz-button-group>
+            <button nz-button nzType="primary" (click)="play()">
+               <i class="anticon anticon-check"></i> 确定
+             </button>
+            <button nz-button (click)="resetForm($event)">
+                    <i class="anticon anticon-rollback"></i> 重置
+             </button>
+        </nz-button-group>
+        <!-- 按钮 end -->
+    </div>
+</div>

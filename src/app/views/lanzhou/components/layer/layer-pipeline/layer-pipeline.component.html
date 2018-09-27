@@ -1,3 +1,15 @@
-<p>
+<!-- <p>
   layer-pipeline works!
-</p>
+</p> -->
+
+<div class="panel" style="height:100%;">
+    <div class="panel-body panel-body-space">
+        <!-- 内容 star -->
+        <nz-tree [(ngModel)]="nodes" [nzCheckable]="true" [nzMultiple]="true" [nzDefaultExpandedKeys]="expandKeys" [nzDefaultCheckedKeys]="checkedKeys" [nzDefaultSelectedKeys]="selectedKeys" [nzDefaultExpandAll]="expandDefault" (nzClick)="mouseAction('click',$event)"
+            (nzDblClick)="mouseAction('dblclick', $event)" (nzCheckBoxChange)="checkAction($event)">
+        </nz-tree>
+        <nz-divider nzText="分隔线" nzOrientation="left"></nz-divider>
+
+        <!-- 内容 end -->
+    </div>
+</div>

@@ -1,3 +1,115 @@
-<p>
+<!-- <p>
   roaming-path works!
-</p>
+</p> -->
+
+<div class="panel" style="height:100%;">
+    <div class="panel-body panel-body-space">
+        <!-- 内容 star -->
+
+        <form nz-form>
+
+            <nz-divider nzText="分隔线" nzOrientation="left"></nz-divider>
+
+            <nz-form-item>
+                <nz-form-label [nzSm]="10" [nzXs]="20">漫游速率(倍)</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="10" [nzXs]="20">报警高度(米)</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="10" [nzXs]="20">视角模式</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input [(ngModel)]="pointLabelText" placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-divider nzText="分隔线" nzOrientation="left"></nz-divider>
+
+            <nz-form-item>
+                <nz-form-label [nzSm]="10" [nzXs]="20">距离(米)</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="10" [nzXs]="20">高度(米)</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-divider nzText="分隔线" nzOrientation="left"></nz-divider>
+
+            <nz-form-item>
+                <nz-form-label [nzSm]="10" [nzXs]="20">总长度(米)</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="10" [nzXs]="20">总时长(小时)</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="10" [nzXs]="20" nzFor="pointLabelText">坐标</nz-form-label>
+                <nz-form-control [nzSm]="6" [nzXs]="20">
+                    <input type="text" nz-input placeholder="经度">
+                </nz-form-control>
+                <nz-form-control [nzSm]="1" [nzXs]="20"></nz-form-control>
+                <nz-form-control [nzSm]="6" [nzXs]="20">
+                    <input type="text" nz-input placeholder="纬度">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="10" [nzXs]="20">地面海拔(米)</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="10" [nzXs]="20">飞行高度(米)</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-label [nzSm]="10" [nzXs]="20">离地高度(米)</nz-form-label>
+                <nz-form-control [nzSm]="14" [nzXs]="20">
+                    <input type="text" nz-input placeholder="请输入标注文字">
+                </nz-form-control>
+            </nz-form-item>
+
+            <nz-divider nzText="分隔线" nzOrientation="left"></nz-divider>
+
+            <nz-form-item>
+                <nz-progress [nzPercent]="50" nzStatus="active"></nz-progress>
+            </nz-form-item>
+
+            <nz-divider nzText="分隔线" nzOrientation="left"></nz-divider>
+
+        </form>
+
+        <!-- 内容 end -->
+    </div>
+    <div class="panel-foot" style="text-align:center;">
+
+        <!-- 按钮 star-->
+        <nz-button-group>
+            <button nz-button nzType="primary" (click)="play()">
+               <i class="anticon anticon-check"></i> 确定
+             </button>
+            <button nz-button (click)="resetForm($event)">
+                    <i class="anticon anticon-rollback"></i> 重置
+             </button>
+        </nz-button-group>
+        <!-- 按钮 end -->
+    </div>
+</div>
