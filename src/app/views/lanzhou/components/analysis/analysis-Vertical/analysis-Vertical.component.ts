@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-analysis-Vertical',
-  templateUrl: './analysis-Vertical.component.html',
-  styleUrls: ['./analysis-Vertical.component.css']
+  selector: 'app-analysis-vertical',
+  templateUrl: './analysis-vertical.component.html',
+  styleUrls: ['./analysis-vertical.component.css']
 })
 export class AnalysisVerticalComponent implements OnInit {
 

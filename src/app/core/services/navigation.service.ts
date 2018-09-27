@@ -92,15 +92,15 @@ export class NavigationService {
       title: '图层控制',
       icon: 'pIcon pIcon-001001',
       data: [{
-        id: 'database',
+        id: 'layer-base',
         title: '基础图层',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'modal',
+        id: 'layer-model',
         title: '模型图层',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'line',
+        id: 'layer-pipeline',
         title: '管线图层',
         icon: 'pIcon pIcon-001001'
       }]
@@ -109,31 +109,31 @@ export class NavigationService {
       title: '地图操作',
       icon: 'pIcon pIcon-001001',
       data: [{
-        id: 'roam',
+        id: 'map-roaming',
         title: '地图漫游',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'coordinate',
+        id: 'coordinate-measurement',
         title: '坐标量测',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'distance',
+        id: 'distance-measurement',
         title: '距离量测',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'area',
+        id: 'area-measurement',
         title: '面积量测',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'route',
+        id: 'roaming-path',
         title: '漫游路径',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'spot',
+        id: 'tagging-point',
         title: '兴趣点标注',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'clear',
+        id: 'tagging-clear',
         title: '清除标注',
         icon: 'pIcon pIcon-001001'
       }]
@@ -142,15 +142,15 @@ export class NavigationService {
       title: '地图定位',
       icon: 'pIcon pIcon-001001',
       data: [{
-        id: 'road',
+        id: 'location-road',
         title: '道路定位',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'place',
+        id: 'location-place',
         title: '地名定位',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'coordinate',
+        id: 'location-coordinate',
         title: '坐标定位',
         icon: 'pIcon pIcon-001001'
       }]
@@ -159,27 +159,27 @@ export class NavigationService {
       title: '管线查询',
       icon: 'pIcon pIcon-001001',
       data: [{
-        id: 'point',
+        id: 'query-click',
         title: '点击查询',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'diameter',
+        id: 'query-pipe',
         title: '管径',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'material',
+        id: 'query-material',
         title: '材质',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'subsidiary',
+        id: 'query-appendages',
         title: '附属物',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'condition',
+        id: 'query-conditional',
         title: '条件查询',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'space',
+        id: 'query-spatial',
         title: '空间查询',
         icon: 'pIcon pIcon-001001'
       }]
@@ -188,23 +188,23 @@ export class NavigationService {
       title: '管线统计',
       icon: 'pIcon pIcon-001001',
       data: [{
-        id: 'class',
+        id: 'statistics-class',
         title: '分类统计',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'subseciton',
+        id: 'statistics-piecewise',
         title: '分段统计',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'subsidiary',
+        id: 'statistics-appendage',
         title: '附属物统计',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'length',
+        id: 'statistics-length',
         title: '长度统计',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'bars',
+        id: 'statistics-count',
         title: '条数统计',
         icon: 'pIcon pIcon-001001'
       }]
@@ -213,48 +213,48 @@ export class NavigationService {
       title: '综合分析',
       icon: 'pIcon pIcon-001001',
       data: [{
-        id: 'life',
+        id: 'analysis-pipeline',
         title: '管线寿命',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'cross',
+        id: 'analysis-cross',
         title: '横断面分析',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'detonator',
+        id: 'analysis-tube',
         title: '爆管分析',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'connected',
+        id: 'analysis-connectivity',
         title: '连通分析',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'reaches',
+        id: 'analysis-tracing',
         title: '上下游追踪',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'level',
+        id: 'analysis-horizontal',
         title: '水平净距',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'vertical',
+        id: 'analysis-vertical',
         title: '垂直净距',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'soil',
+        id: 'analysis-depth',
         title: '覆土深度',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'flow',
+        id: 'analysis-flow',
         title: '流向分析',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'forward',
+        id: 'analysis-visibility',
         title: '通视分析',
         icon: 'pIcon pIcon-001001'
       }]
     }, {
-      id: 'house',
+      id: 'housing',
       title: '房屋管理',
       icon: 'pIcon pIcon-001001',
       data: [{
@@ -263,15 +263,15 @@ export class NavigationService {
         icon: 'pIcon pIcon-001001'
       }]
     }, {
-      id: 'print',
+      id: 'thematic',
       title: '打印出图',
       icon: 'pIcon pIcon-001001',
       data: [{
-        id: 'printing',
+        id: 'thematic-printing',
         title: '专题图打印',
         icon: 'pIcon pIcon-001001'
       }, {
-        id: 'output',
+        id: 'thematic-output',
         title: '专题图输出',
         icon: 'pIcon pIcon-001001'
       }]

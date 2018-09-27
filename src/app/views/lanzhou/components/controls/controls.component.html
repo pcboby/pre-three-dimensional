@@ -1,50 +1,123 @@
 <ng-container [ngSwitch]="controlId">
-    <!-- 001 -->
-    <!-- <ng-container *ngSwitchCase="001001">
-        aaaa
-    </ng-container> -->
-    <!--
-
-layer-base
-layer-model
-layer-pipeline
-map-roaming
-coordinate-measurement
-distance-measurement
-area-measurement
-roaming-path
-tagging-point
-tagging-clear
-location-road
-location-place
-location-coordinate
-query-click
-query-pipe
-query-material
-query-appendages
-query-conditional
-query-spatial
-statistics-class
-statistics-piecewise
-statistics-appendage
-statistics-length
-statistics-count
-analysis-pipeline
-analysis-cross
-analysis-tube
-analysis-connectivity
-analysis-tracing
-analysis-horizontal
-analysis-Vertical
-analysis-depth
-analysis-flow
-analysis-visibility
-housing
-thematic-printing
-thematic-output
-
-
- -->
+    <!-- layer -->
+    <ng-container *ngSwitchCase="'layer-base'">
+        <app-layer-base></app-layer-base>
+    </ng-container>
+    <ng-container *ngSwitchCase="'layer-model'">
+        <app-layer-model></app-layer-model>
+    </ng-container>
+    <ng-container *ngSwitchCase="'layer-pipeline'">
+        <app-layer-pipeline></app-layer-pipeline>
+    </ng-container>
+    <!-- opration -->
+    <ng-container *ngSwitchCase="'map-roaming'">
+        <app-map-roaming></app-map-roaming>
+    </ng-container>
+    <ng-container *ngSwitchCase="'coordinate-measurement'">
+        <app-coordinate-measurement></app-coordinate-measurement>
+    </ng-container>
+    <ng-container *ngSwitchCase="'distance-measurement'">
+        <app-distance-measurement></app-distance-measurement>
+    </ng-container>
+    <ng-container *ngSwitchCase="'area-measurement'">
+        <app-area-measurement></app-area-measurement>
+    </ng-container>
+    <ng-container *ngSwitchCase="'roaming-path'">
+        <app-roaming-path></app-roaming-path>
+    </ng-container>
+    <ng-container *ngSwitchCase="'tagging-point'">
+        <app-tagging-point></app-tagging-point>
+    </ng-container>
+    <ng-container *ngSwitchCase="'tagging-clear'">
+        <app-tagging-clear></app-tagging-clear>
+    </ng-container>
+    <!-- location -->
+    <ng-container *ngSwitchCase="'location-road'">
+        <app-location-road></app-location-road>
+    </ng-container>
+    <ng-container *ngSwitchCase="'location-place'">
+        <app-location-place></app-location-place>
+    </ng-container>
+    <ng-container *ngSwitchCase="'location-coordinate'">
+        <app-location-coordinate></app-location-coordinate>
+    </ng-container>
+    <!-- query -->
+    <ng-container *ngSwitchCase="'query-click'">
+        <app-query-click></app-query-click>
+    </ng-container>
+    <ng-container *ngSwitchCase="'query-pipe'">
+        <app-query-pipe></app-query-pipe>
+    </ng-container>
+    <ng-container *ngSwitchCase="'query-material'">
+        <app-query-material></app-query-material>
+    </ng-container>
+    <ng-container *ngSwitchCase="'query-appendages'">
+        <app-query-appendages></app-query-appendages>
+    </ng-container>
+    <ng-container *ngSwitchCase="'query-conditional'">
+        <app-query-conditional></app-query-conditional>
+    </ng-container>
+    <ng-container *ngSwitchCase="'query-spatial'">
+        <app-query-spatial></app-query-spatial>
+    </ng-container>
+    <!-- statistics -->
+    <ng-container *ngSwitchCase="'statistics-class'">
+        <app-statistics-class></app-statistics-class>
+    </ng-container>
+    <ng-container *ngSwitchCase="'statistics-piecewise'">
+        <app-statistics-piecewise></app-statistics-piecewise>
+    </ng-container>
+    <ng-container *ngSwitchCase="'statistics-appendage'">
+        <app-statistics-appendage></app-statistics-appendage>
+    </ng-container>
+    <ng-container *ngSwitchCase="'statistics-length'">
+        <app-statistics-length></app-statistics-length>
+    </ng-container>
+    <ng-container *ngSwitchCase="'statistics-count'">
+        <app-statistics-count></app-statistics-count>
+    </ng-container>
+    <!-- analysis -->
+    <ng-container *ngSwitchCase="'analysis-pipeline'">
+        <app-analysis-pipeline></app-analysis-pipeline>
+    </ng-container>
+    <ng-container *ngSwitchCase="'analysis-cross'">
+        <app-analysis-cross></app-analysis-cross>
+    </ng-container>
+    <ng-container *ngSwitchCase="'analysis-tube'">
+        <app-analysis-tube></app-analysis-tube>
+    </ng-container>
+    <ng-container *ngSwitchCase="'analysis-connectivity'">
+        <app-analysis-connectivity></app-analysis-connectivity>
+    </ng-container>
+    <ng-container *ngSwitchCase="'analysis-tracing'">
+        <app-analysis-tracing></app-analysis-tracing>
+    </ng-container>
+    <ng-container *ngSwitchCase="'analysis-horizontal'">
+        <app-analysis-horizontal></app-analysis-horizontal>
+    </ng-container>
+    <ng-container *ngSwitchCase="'analysis-vertical'">
+        <app-analysis-vertical></app-analysis-vertical>
+    </ng-container>
+    <ng-container *ngSwitchCase="'analysis-depth'">
+        <app-analysis-depth></app-analysis-depth>
+    </ng-container>
+    <ng-container *ngSwitchCase="'analysis-flow'">
+        <app-analysis-flow></app-analysis-flow>
+    </ng-container>
+    <ng-container *ngSwitchCase="'analysis-visibility'">
+        <app-analysis-visibility></app-analysis-visibility>
+    </ng-container>
+    <!-- house -->
+    <ng-container *ngSwitchCase="'housing'">
+        <app-housing></app-housing>
+    </ng-container>
+    <!-- thematic -->
+    <ng-container *ngSwitchCase="'thematic-printing'">
+        <app-thematic-printing></app-thematic-printing>
+    </ng-container>
+    <ng-container *ngSwitchCase="'thematic-output'">
+        <app-thematic-output></app-thematic-output>
+    </ng-container>
 
     <!-- error -->
     <ng-container *ngSwitchCase="'undefined'">
