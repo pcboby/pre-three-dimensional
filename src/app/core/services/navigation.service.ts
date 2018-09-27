@@ -105,7 +105,7 @@ export class NavigationService {
         icon: 'pIcon pIcon-001001'
       }]
     }, {
-      id: 'control',
+      id: 'opration',
       title: '地图操作',
       icon: 'pIcon pIcon-001001',
       data: [{
