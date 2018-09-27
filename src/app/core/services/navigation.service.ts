@@ -275,6 +275,21 @@ export class NavigationService {
         title: '专题图输出',
         icon: 'pIcon pIcon-001001'
       }]
+    }, {
+      id: 'system',
+      title: '系统管理',
+      icon: 'pIcon pIcon-001001',
+      data: [{
+        id: 'system-org',
+        title: '机构管理',
+        icon: 'pIcon pIcon-001001',
+        sideWidth: '100%'
+      }, {
+        id: 'system-log',
+        title: '日志管理',
+        icon: 'pIcon pIcon-001001',
+        sideWidth: '100%'
+      }]
     }]
   };
 

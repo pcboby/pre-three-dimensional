@@ -3,8 +3,8 @@
     <app-silder class="layout-silder" [hidden]="!showSilder"></app-silder>
     <div class="layout-container">
         <app-toolbar class="layout-toolbar" [hidden]="!showToolbar"></app-toolbar>
-        <app-mapper class="layout-wraper"></app-mapper>
-        <app-sidebar class="layout-sidebar" [title]="sideTitle" [icon]="sideIcon" [hidden]="sidebar_isHidden">
+        <app-mapper class="layout-wraper" [ngStyle]="{'display':sideWidth==='100%'?'none':''}"></app-mapper>
+        <app-sidebar class="layout-sidebar" [title]="sideTitle" [icon]="sideIcon" [hidden]="sidebar_isHidden" [ngStyle]="{'width':sideWidth}">
             <app-controls></app-controls>
         </app-sidebar>
     </div>

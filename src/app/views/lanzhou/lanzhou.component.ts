@@ -1,5 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { NavigationService, LayoutService } from '../../core/services';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  NavigationService,
+  LayoutService
+} from '../../core/services';
 
 @Component({
   selector: 'app-lanzhou',
@@ -23,6 +29,11 @@ export class LanzhouComponent implements OnInit {
   }
   get sideIcon() {
     return this.navigationService.getTool()['icon'] || '';
+  }
+  get sideWidth() {
+    // const sw = this.navigationService.getTool()['sideWidth'];
+
+    return this.navigationService.getTool()['sideWidth'];
   }
   get showHeader() {
     return this.layoutService.showHeader;

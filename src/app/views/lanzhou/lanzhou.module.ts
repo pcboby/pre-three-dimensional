@@ -37,7 +37,9 @@ import {
   StatisticsLengthComponent,
   StatisticsPiecewiseComponent,
   ThematicOutputComponent,
-  ThematicPrintingComponent
+  ThematicPrintingComponent,
+  SystemOrgComponent,
+  SystemLogComponent
 } from './components';
 import {
   NgModule
@@ -103,7 +105,9 @@ const controlComponents = [
   StatisticsLengthComponent,
   StatisticsPiecewiseComponent,
   ThematicOutputComponent,
-  ThematicPrintingComponent
+  ThematicPrintingComponent,
+  SystemOrgComponent,
+  SystemLogComponent
 ];
 @NgModule({
   imports: [

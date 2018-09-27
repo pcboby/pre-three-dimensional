@@ -44,4 +44,7 @@ export * from './statistics/statistics-piecewise/statistics-piecewise.component'
 // thematic
 export * from './thematic/thematic-output/thematic-output.component';
 export * from './thematic/thematic-printing/thematic-printing.component';
+// system
+export * from './system/system-log/system-log.component';
+export * from './system/system-org/system-org.component';
 
