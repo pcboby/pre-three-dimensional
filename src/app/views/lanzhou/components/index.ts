@@ -11,7 +11,7 @@ export * from './analysis/analysis-tube/analysis-tube.component';
 export * from './analysis/analysis-vertical/analysis-vertical.component';
 export * from './analysis/analysis-visibility/analysis-visibility.component';
 // house
-export * from './house/housing/housing.component';
+export * from './house/information/information.component';
 // layer
 export * from './layer/layer-base/layer-base.component';
 export * from './layer/layer-model/layer-model.component';
