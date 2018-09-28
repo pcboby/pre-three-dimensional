@@ -21,7 +21,20 @@ export class MapArkComponent implements OnInit, OnDestroy {
 
   isDev = !environment.production;
 
-  constructor(public el: ElementRef) {}
+  private timer;
+  private isLoaded = false;
+
+  constructor(public el: ElementRef) {
+    if (this.isIE && this.hasArk) {
+      this.timer = setInterval(() => {
+        try {
+          this.isLoaded = true;
+        } catch (error) {
+          this.isLoaded = false;
+        }
+      }, 500);
+    }
+  }
   get isIE() {
     // return true;
     return untils().IE() > 10;
@@ -36,6 +49,9 @@ export class MapArkComponent implements OnInit, OnDestroy {
     check();
   }
   ngOnDestroy() {
+    if (this.timer) {
+      clearInterval(this.timer);
+    }
     try {
       untils().ArkMap().UnInitialize();
     } catch (error) {}

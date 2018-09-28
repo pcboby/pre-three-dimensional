@@ -10,6 +10,9 @@
     font-family: pcFont;
     font-weight: normal !important;
     font-style: normal !important;
+    /*********
+    chongqing
+    *********/
     /*一级*/
     &.pIcon-001::before {
         content: '1'
@@ -168,5 +171,36 @@
     }
     &.pIcon-000036::before {
         content: 'w'
+    }
+    /*********
+    lanzhou
+    *********/
+    /**/
+    &.pIcon-100001::before {
+        content: '\e865'
+    }
+    &.pIcon-100002::before {
+        content: '\e866'
+    }
+    &.pIcon-100003::before {
+        content: '\e867'
+    }
+    &.pIcon-100004::before {
+        content: '\e868'
+    }
+    &.pIcon-100005::before {
+        content: '\e869'
+    }
+    &.pIcon-100006::before {
+        content: '\e86a'
+    }
+    &.pIcon-100007::before {
+        content: '\e86b'
+    }
+    &.pIcon-100008::before {
+        content: '\e86c'
+    }
+    &.pIcon-100009::before {
+        content: '\e86d'
     }
 }

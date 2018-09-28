@@ -90,204 +90,204 @@ export class NavigationService {
     lanzhou: [{
       id: 'layer',
       title: '图层控制',
-      icon: 'pIcon pIcon-001001',
+      icon: 'pIcon pIcon-100001',
       data: [{
         id: 'layer-base',
         title: '基础图层',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'layer-model',
         title: '模型图层',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'layer-pipeline',
         title: '管线图层',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }]
     }, {
       id: 'opration',
       title: '地图操作',
-      icon: 'pIcon pIcon-001001',
+      icon: 'pIcon pIcon-100002',
       data: [{
         id: 'map-roaming',
         title: '地图漫游',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'coordinate-measurement',
         title: '坐标量测',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'distance-measurement',
         title: '距离量测',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'area-measurement',
         title: '面积量测',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'roaming-path',
         title: '漫游路径',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'tagging-point',
         title: '兴趣点标注',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'tagging-clear',
         title: '清除标注',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }]
     }, {
       id: 'location',
       title: '地图定位',
-      icon: 'pIcon pIcon-001001',
+      icon: 'pIcon pIcon-100003',
       data: [{
         id: 'location-road',
         title: '道路定位',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'location-place',
         title: '地名定位',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'location-coordinate',
         title: '坐标定位',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }]
     }, {
       id: 'query',
       title: '管线查询',
-      icon: 'pIcon pIcon-001001',
+      icon: 'pIcon pIcon-100005',
       data: [{
         id: 'query-click',
         title: '点击查询',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'query-pipe',
         title: '管径',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'query-material',
         title: '材质',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'query-appendages',
         title: '附属物',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'query-conditional',
         title: '条件查询',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'query-spatial',
         title: '空间查询',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }]
     }, {
       id: 'statistics',
       title: '管线统计',
-      icon: 'pIcon pIcon-001001',
+      icon: 'pIcon pIcon-100006',
       data: [{
         id: 'statistics-class',
         title: '分类统计',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'statistics-piecewise',
         title: '分段统计',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'statistics-appendage',
         title: '附属物统计',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'statistics-length',
         title: '长度统计',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'statistics-count',
         title: '条数统计',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }]
     }, {
       id: 'analysis',
       title: '综合分析',
-      icon: 'pIcon pIcon-001001',
+      icon: 'pIcon pIcon-100001',
       data: [{
         id: 'analysis-pipeline',
         title: '管线寿命',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'analysis-cross',
         title: '横断面分析',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'analysis-tube',
         title: '爆管分析',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'analysis-connectivity',
         title: '连通分析',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'analysis-tracing',
         title: '上下游追踪',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'analysis-horizontal',
         title: '水平净距',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'analysis-vertical',
         title: '垂直净距',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'analysis-depth',
         title: '覆土深度',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'analysis-flow',
         title: '流向分析',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'analysis-visibility',
         title: '通视分析',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }]
     }, {
       id: 'housing',
       title: '房屋管理',
-      icon: 'pIcon pIcon-001001',
+      icon: 'pIcon pIcon-100004',
       data: [{
         id: 'information',
         title: '房屋信息',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }]
     }, {
       id: 'thematic',
       title: '打印出图',
-      icon: 'pIcon pIcon-001001',
+      icon: 'pIcon pIcon-100001',
       data: [{
         id: 'thematic-printing',
         title: '专题图打印',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }, {
         id: 'thematic-output',
         title: '专题图输出',
-        icon: 'pIcon pIcon-001001'
+        icon: 'pIcon pIcon-100001'
       }]
     }, {
       id: 'system',
       title: '系统管理',
-      icon: 'pIcon pIcon-001001',
+      icon: 'pIcon pIcon-100001',
       data: [{
         id: 'system-org',
         title: '机构管理',
-        icon: 'pIcon pIcon-001001',
+        icon: 'pIcon pIcon-100001',
         sideWidth: '100%'
       }, {
         id: 'system-log',
         title: '日志管理',
-        icon: 'pIcon pIcon-001001',
+        icon: 'pIcon pIcon-100001',
         sideWidth: '100%'
       }]
     }]
